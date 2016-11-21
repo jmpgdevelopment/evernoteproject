@@ -9,6 +9,7 @@ target 'evernoteProject' do
 
   pod 'evernote-cloud-sdk-ios'
   pod 'AFNetworking', '~> 3.0'
+  pod 'JGProgressHUD'
 
   target 'evernoteProjectTests' do
     inherit! :search_paths
