@@ -1,0 +1,912 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		381506539AC44662588A22EB /* libPods-evernoteProjectUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BFB5C9527CE842E8E4B7B7A0 /* libPods-evernoteProjectUITests.a */; };
+		4B75F27B71A9B6E383194DD6 /* libPods-evernoteProjectTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FAE18F58AF250B3935FDEFB /* libPods-evernoteProjectTests.a */; };
+		6B3B5A261DE2283B00ABD0D2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B3B5A251DE2283B00ABD0D2 /* main.m */; };
+		6B3B5A291DE2283B00ABD0D2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B3B5A281DE2283B00ABD0D2 /* AppDelegate.m */; };
+		6B3B5A2F1DE2283B00ABD0D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B3B5A2D1DE2283B00ABD0D2 /* Main.storyboard */; };
+		6B3B5A311DE2283B00ABD0D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B3B5A301DE2283B00ABD0D2 /* Assets.xcassets */; };
+		6B3B5A341DE2283B00ABD0D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B3B5A321DE2283B00ABD0D2 /* LaunchScreen.storyboard */; };
+		6B3B5A3F1DE2283B00ABD0D2 /* evernoteProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B3B5A3E1DE2283B00ABD0D2 /* evernoteProjectTests.m */; };
+		6B3B5A4A1DE2283B00ABD0D2 /* evernoteProjectUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B3B5A491DE2283B00ABD0D2 /* evernoteProjectUITests.m */; };
+		6B5B24871DE230BB00BB16CF /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B5B24861DE230BB00BB16CF /* Default-568h@2x.png */; };
+		6B82AF7D1DE382F5009C2B75 /* RestClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B82AF7C1DE382F5009C2B75 /* RestClient.m */; };
+		6B82AF811DE38382009C2B75 /* LoginRest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B82AF801DE38382009C2B75 /* LoginRest.m */; };
+		6B82AF851DE383B8009C2B75 /* NotesRest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B82AF841DE383B8009C2B75 /* NotesRest.m */; };
+		6B82AF891DE384E5009C2B75 /* UseCasesBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B82AF881DE384E5009C2B75 /* UseCasesBase.m */; };
+		6B82AF8D1DE3853F009C2B75 /* NotesUseCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B82AF8C1DE3853F009C2B75 /* NotesUseCase.m */; };
+		6B82AF911DE38594009C2B75 /* LoginUseCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B82AF901DE38594009C2B75 /* LoginUseCase.m */; };
+		6B82AF951DE3860D009C2B75 /* BaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B82AF941DE3860D009C2B75 /* BaseVC.m */; };
+		6B82AF981DE38633009C2B75 /* LoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B82AF971DE38633009C2B75 /* LoginVC.m */; };
+		6B82AF9A1DE38655009C2B75 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B82AF991DE38655009C2B75 /* Login.storyboard */; };
+		6B82AF9D1DE3868A009C2B75 /* NotesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B82AF9C1DE3868A009C2B75 /* NotesVC.m */; };
+		6B82AF9F1DE3869A009C2B75 /* notes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B82AF9E1DE3869A009C2B75 /* notes.storyboard */; };
+		ACA4A79237D4727034347378 /* libPods-evernoteProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E7EF8D8DA0FF8984CDB24E1D /* libPods-evernoteProject.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6B3B5A3B1DE2283B00ABD0D2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6B3B5A191DE2283A00ABD0D2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6B3B5A201DE2283A00ABD0D2;
+			remoteInfo = evernoteProject;
+		};
+		6B3B5A461DE2283B00ABD0D2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6B3B5A191DE2283A00ABD0D2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6B3B5A201DE2283A00ABD0D2;
+			remoteInfo = evernoteProject;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1FAE18F58AF250B3935FDEFB /* libPods-evernoteProjectTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-evernoteProjectTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B3B5A211DE2283B00ABD0D2 /* evernoteProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = evernoteProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B3B5A251DE2283B00ABD0D2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6B3B5A271DE2283B00ABD0D2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		6B3B5A281DE2283B00ABD0D2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		6B3B5A2E1DE2283B00ABD0D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6B3B5A301DE2283B00ABD0D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6B3B5A331DE2283B00ABD0D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6B3B5A351DE2283B00ABD0D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6B3B5A3A1DE2283B00ABD0D2 /* evernoteProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = evernoteProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B3B5A3E1DE2283B00ABD0D2 /* evernoteProjectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = evernoteProjectTests.m; sourceTree = "<group>"; };
+		6B3B5A401DE2283B00ABD0D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6B3B5A451DE2283B00ABD0D2 /* evernoteProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = evernoteProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B3B5A491DE2283B00ABD0D2 /* evernoteProjectUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = evernoteProjectUITests.m; sourceTree = "<group>"; };
+		6B3B5A4B1DE2283B00ABD0D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6B3B5A571DE22AA300ABD0D2 /* Config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
+		6B5B24861DE230BB00BB16CF /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		6B82AF7B1DE382F5009C2B75 /* RestClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RestClient.h; path = DataAccess/Rest/RestClient.h; sourceTree = "<group>"; };
+		6B82AF7C1DE382F5009C2B75 /* RestClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RestClient.m; path = DataAccess/Rest/RestClient.m; sourceTree = "<group>"; };
+		6B82AF7E1DE3832A009C2B75 /* RestClientInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = RestClientInterface.h; path = DataAccess/Rest/RestClientInterface.h; sourceTree = "<group>"; };
+		6B82AF7F1DE38382009C2B75 /* LoginRest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginRest.h; path = DataAccess/Rest/Login/LoginRest.h; sourceTree = "<group>"; };
+		6B82AF801DE38382009C2B75 /* LoginRest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginRest.m; path = DataAccess/Rest/Login/LoginRest.m; sourceTree = "<group>"; };
+		6B82AF821DE383A2009C2B75 /* LoginRestInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LoginRestInterface.h; path = DataAccess/Rest/Login/LoginRestInterface.h; sourceTree = "<group>"; };
+		6B82AF831DE383B8009C2B75 /* NotesRest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NotesRest.h; path = DataAccess/Rest/Notes/NotesRest.h; sourceTree = "<group>"; };
+		6B82AF841DE383B8009C2B75 /* NotesRest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NotesRest.m; path = DataAccess/Rest/Notes/NotesRest.m; sourceTree = "<group>"; };
+		6B82AF861DE383E5009C2B75 /* NotesRestInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NotesRestInterface.h; path = DataAccess/Rest/Notes/NotesRestInterface.h; sourceTree = "<group>"; };
+		6B82AF871DE384E5009C2B75 /* UseCasesBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UseCasesBase.h; path = Business/UseCases/UseCasesBase.h; sourceTree = "<group>"; };
+		6B82AF881DE384E5009C2B75 /* UseCasesBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UseCasesBase.m; path = Business/UseCases/UseCasesBase.m; sourceTree = "<group>"; };
+		6B82AF8A1DE38508009C2B75 /* UsesCasesBaseInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = UsesCasesBaseInterface.h; path = Business/UseCases/UsesCasesBaseInterface.h; sourceTree = "<group>"; };
+		6B82AF8B1DE3853F009C2B75 /* NotesUseCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NotesUseCase.h; path = Business/UseCases/Notes/NotesUseCase.h; sourceTree = "<group>"; };
+		6B82AF8C1DE3853F009C2B75 /* NotesUseCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NotesUseCase.m; path = Business/UseCases/Notes/NotesUseCase.m; sourceTree = "<group>"; };
+		6B82AF8E1DE38565009C2B75 /* NotesUseCaseInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NotesUseCaseInterface.h; path = Business/UseCases/Notes/NotesUseCaseInterface.h; sourceTree = "<group>"; };
+		6B82AF8F1DE38594009C2B75 /* LoginUseCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginUseCase.h; path = Business/UseCases/Login/LoginUseCase.h; sourceTree = "<group>"; };
+		6B82AF901DE38594009C2B75 /* LoginUseCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginUseCase.m; path = Business/UseCases/Login/LoginUseCase.m; sourceTree = "<group>"; };
+		6B82AF921DE385A8009C2B75 /* LoginUseCaseInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LoginUseCaseInterface.h; path = Business/UseCases/Login/LoginUseCaseInterface.h; sourceTree = "<group>"; };
+		6B82AF931DE3860D009C2B75 /* BaseVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseVC.h; path = Presentation/Base/BaseVC.h; sourceTree = "<group>"; };
+		6B82AF941DE3860D009C2B75 /* BaseVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseVC.m; path = Presentation/Base/BaseVC.m; sourceTree = "<group>"; };
+		6B82AF961DE38633009C2B75 /* LoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginVC.h; path = Presentation/Login/LoginVC.h; sourceTree = "<group>"; };
+		6B82AF971DE38633009C2B75 /* LoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginVC.m; path = Presentation/Login/LoginVC.m; sourceTree = "<group>"; };
+		6B82AF991DE38655009C2B75 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Login.storyboard; path = Presentation/Login/Login.storyboard; sourceTree = "<group>"; };
+		6B82AF9B1DE3868A009C2B75 /* NotesVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NotesVC.h; path = Presentation/Notes/NotesVC.h; sourceTree = "<group>"; };
+		6B82AF9C1DE3868A009C2B75 /* NotesVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NotesVC.m; path = Presentation/Notes/NotesVC.m; sourceTree = "<group>"; };
+		6B82AF9E1DE3869A009C2B75 /* notes.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = notes.storyboard; sourceTree = "<group>"; };
+		81CF1A0F83CC6D9CD3FDBECE /* Pods-evernoteProjectUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-evernoteProjectUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-evernoteProjectUITests/Pods-evernoteProjectUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		8D1A6325EB51858044A7C967 /* Pods-evernoteProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-evernoteProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-evernoteProject/Pods-evernoteProject.release.xcconfig"; sourceTree = "<group>"; };
+		B2F29BB8A1058C679102AD38 /* Pods-evernoteProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-evernoteProjectTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-evernoteProjectTests/Pods-evernoteProjectTests.release.xcconfig"; sourceTree = "<group>"; };
+		BFB5C9527CE842E8E4B7B7A0 /* libPods-evernoteProjectUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-evernoteProjectUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7EF8D8DA0FF8984CDB24E1D /* libPods-evernoteProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-evernoteProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2092B601A019F0E6242B35C /* Pods-evernoteProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-evernoteProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-evernoteProject/Pods-evernoteProject.debug.xcconfig"; sourceTree = "<group>"; };
+		F93BF62E6421AE527E9C8F2B /* Pods-evernoteProjectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-evernoteProjectTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-evernoteProjectTests/Pods-evernoteProjectTests.debug.xcconfig"; sourceTree = "<group>"; };
+		FAA7E7D1720D26658D17EB10 /* Pods-evernoteProjectUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-evernoteProjectUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-evernoteProjectUITests/Pods-evernoteProjectUITests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6B3B5A1E1DE2283A00ABD0D2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ACA4A79237D4727034347378 /* libPods-evernoteProject.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6B3B5A371DE2283B00ABD0D2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B75F27B71A9B6E383194DD6 /* libPods-evernoteProjectTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6B3B5A421DE2283B00ABD0D2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				381506539AC44662588A22EB /* libPods-evernoteProjectUITests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		49DAB2FB5D66B6DC7E789688 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E7EF8D8DA0FF8984CDB24E1D /* libPods-evernoteProject.a */,
+				1FAE18F58AF250B3935FDEFB /* libPods-evernoteProjectTests.a */,
+				BFB5C9527CE842E8E4B7B7A0 /* libPods-evernoteProjectUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6B3B5A181DE2283A00ABD0D2 = {
+			isa = PBXGroup;
+			children = (
+				6B5B24861DE230BB00BB16CF /* Default-568h@2x.png */,
+				6B3B5A231DE2283B00ABD0D2 /* evernoteProject */,
+				6B3B5A3D1DE2283B00ABD0D2 /* evernoteProjectTests */,
+				6B3B5A481DE2283B00ABD0D2 /* evernoteProjectUITests */,
+				6B3B5A221DE2283B00ABD0D2 /* Products */,
+				E35848B365F7A8B555C63473 /* Pods */,
+				49DAB2FB5D66B6DC7E789688 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		6B3B5A221DE2283B00ABD0D2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6B3B5A211DE2283B00ABD0D2 /* evernoteProject.app */,
+				6B3B5A3A1DE2283B00ABD0D2 /* evernoteProjectTests.xctest */,
+				6B3B5A451DE2283B00ABD0D2 /* evernoteProjectUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6B3B5A231DE2283B00ABD0D2 /* evernoteProject */ = {
+			isa = PBXGroup;
+			children = (
+				6B82AFA01DE38722009C2B75 /* Application */,
+				6B82AF6E1DE38134009C2B75 /* Presentation */,
+				6B82AF6F1DE38177009C2B75 /* Business */,
+				6B82AF701DE38181009C2B75 /* DataAccess */,
+				6B82AF711DE381A7009C2B75 /* Resources */,
+				6B3B5A2D1DE2283B00ABD0D2 /* Main.storyboard */,
+				6B3B5A301DE2283B00ABD0D2 /* Assets.xcassets */,
+				6B3B5A321DE2283B00ABD0D2 /* LaunchScreen.storyboard */,
+				6B3B5A351DE2283B00ABD0D2 /* Info.plist */,
+				6B3B5A241DE2283B00ABD0D2 /* Supporting Files */,
+			);
+			path = evernoteProject;
+			sourceTree = "<group>";
+		};
+		6B3B5A241DE2283B00ABD0D2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6B3B5A251DE2283B00ABD0D2 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6B3B5A3D1DE2283B00ABD0D2 /* evernoteProjectTests */ = {
+			isa = PBXGroup;
+			children = (
+				6B3B5A3E1DE2283B00ABD0D2 /* evernoteProjectTests.m */,
+				6B3B5A401DE2283B00ABD0D2 /* Info.plist */,
+			);
+			path = evernoteProjectTests;
+			sourceTree = "<group>";
+		};
+		6B3B5A481DE2283B00ABD0D2 /* evernoteProjectUITests */ = {
+			isa = PBXGroup;
+			children = (
+				6B3B5A491DE2283B00ABD0D2 /* evernoteProjectUITests.m */,
+				6B3B5A4B1DE2283B00ABD0D2 /* Info.plist */,
+			);
+			path = evernoteProjectUITests;
+			sourceTree = "<group>";
+		};
+		6B82AF6E1DE38134009C2B75 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				6B82AF731DE38246009C2B75 /* Base */,
+				6B82AF721DE38240009C2B75 /* Login */,
+				6B82AF741DE3824D009C2B75 /* Notes */,
+			);
+			name = Presentation;
+			sourceTree = "<group>";
+		};
+		6B82AF6F1DE38177009C2B75 /* Business */ = {
+			isa = PBXGroup;
+			children = (
+				6B82AF751DE3825A009C2B75 /* UseCases */,
+			);
+			name = Business;
+			sourceTree = "<group>";
+		};
+		6B82AF701DE38181009C2B75 /* DataAccess */ = {
+			isa = PBXGroup;
+			children = (
+				6B82AF781DE38272009C2B75 /* Rest */,
+			);
+			name = DataAccess;
+			sourceTree = "<group>";
+		};
+		6B82AF711DE381A7009C2B75 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		6B82AF721DE38240009C2B75 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				6B82AF961DE38633009C2B75 /* LoginVC.h */,
+				6B82AF971DE38633009C2B75 /* LoginVC.m */,
+				6B82AF991DE38655009C2B75 /* Login.storyboard */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		6B82AF731DE38246009C2B75 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				6B82AF931DE3860D009C2B75 /* BaseVC.h */,
+				6B82AF941DE3860D009C2B75 /* BaseVC.m */,
+			);
+			name = Base;
+			sourceTree = "<group>";
+		};
+		6B82AF741DE3824D009C2B75 /* Notes */ = {
+			isa = PBXGroup;
+			children = (
+				6B82AF9B1DE3868A009C2B75 /* NotesVC.h */,
+				6B82AF9C1DE3868A009C2B75 /* NotesVC.m */,
+				6B82AF9E1DE3869A009C2B75 /* notes.storyboard */,
+			);
+			name = Notes;
+			sourceTree = "<group>";
+		};
+		6B82AF751DE3825A009C2B75 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				6B82AF761DE38261009C2B75 /* Login */,
+				6B82AF771DE38269009C2B75 /* Notes */,
+				6B82AF871DE384E5009C2B75 /* UseCasesBase.h */,
+				6B82AF881DE384E5009C2B75 /* UseCasesBase.m */,
+				6B82AF8A1DE38508009C2B75 /* UsesCasesBaseInterface.h */,
+			);
+			name = UseCases;
+			sourceTree = "<group>";
+		};
+		6B82AF761DE38261009C2B75 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				6B82AF8F1DE38594009C2B75 /* LoginUseCase.h */,
+				6B82AF901DE38594009C2B75 /* LoginUseCase.m */,
+				6B82AF921DE385A8009C2B75 /* LoginUseCaseInterface.h */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		6B82AF771DE38269009C2B75 /* Notes */ = {
+			isa = PBXGroup;
+			children = (
+				6B82AF8B1DE3853F009C2B75 /* NotesUseCase.h */,
+				6B82AF8C1DE3853F009C2B75 /* NotesUseCase.m */,
+				6B82AF8E1DE38565009C2B75 /* NotesUseCaseInterface.h */,
+			);
+			name = Notes;
+			sourceTree = "<group>";
+		};
+		6B82AF781DE38272009C2B75 /* Rest */ = {
+			isa = PBXGroup;
+			children = (
+				6B82AF7A1DE38280009C2B75 /* Notes */,
+				6B82AF791DE38279009C2B75 /* Login */,
+				6B82AF7B1DE382F5009C2B75 /* RestClient.h */,
+				6B82AF7C1DE382F5009C2B75 /* RestClient.m */,
+				6B82AF7E1DE3832A009C2B75 /* RestClientInterface.h */,
+			);
+			name = Rest;
+			sourceTree = "<group>";
+		};
+		6B82AF791DE38279009C2B75 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				6B82AF7F1DE38382009C2B75 /* LoginRest.h */,
+				6B82AF801DE38382009C2B75 /* LoginRest.m */,
+				6B82AF821DE383A2009C2B75 /* LoginRestInterface.h */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		6B82AF7A1DE38280009C2B75 /* Notes */ = {
+			isa = PBXGroup;
+			children = (
+				6B82AF831DE383B8009C2B75 /* NotesRest.h */,
+				6B82AF841DE383B8009C2B75 /* NotesRest.m */,
+				6B82AF861DE383E5009C2B75 /* NotesRestInterface.h */,
+			);
+			name = Notes;
+			sourceTree = "<group>";
+		};
+		6B82AFA01DE38722009C2B75 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				6B3B5A271DE2283B00ABD0D2 /* AppDelegate.h */,
+				6B3B5A281DE2283B00ABD0D2 /* AppDelegate.m */,
+				6B3B5A571DE22AA300ABD0D2 /* Config.h */,
+			);
+			name = Application;
+			sourceTree = "<group>";
+		};
+		E35848B365F7A8B555C63473 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F2092B601A019F0E6242B35C /* Pods-evernoteProject.debug.xcconfig */,
+				8D1A6325EB51858044A7C967 /* Pods-evernoteProject.release.xcconfig */,
+				F93BF62E6421AE527E9C8F2B /* Pods-evernoteProjectTests.debug.xcconfig */,
+				B2F29BB8A1058C679102AD38 /* Pods-evernoteProjectTests.release.xcconfig */,
+				81CF1A0F83CC6D9CD3FDBECE /* Pods-evernoteProjectUITests.debug.xcconfig */,
+				FAA7E7D1720D26658D17EB10 /* Pods-evernoteProjectUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6B3B5A201DE2283A00ABD0D2 /* evernoteProject */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6B3B5A4E1DE2283B00ABD0D2 /* Build configuration list for PBXNativeTarget "evernoteProject" */;
+			buildPhases = (
+				A01635484E4876CC2C665899 /* [CP] Check Pods Manifest.lock */,
+				6B3B5A1D1DE2283A00ABD0D2 /* Sources */,
+				6B3B5A1E1DE2283A00ABD0D2 /* Frameworks */,
+				6B3B5A1F1DE2283A00ABD0D2 /* Resources */,
+				30BF1959E2DFF926110C2A15 /* [CP] Embed Pods Frameworks */,
+				14FCAE5621E54EE64319BA47 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = evernoteProject;
+			productName = evernoteProject;
+			productReference = 6B3B5A211DE2283B00ABD0D2 /* evernoteProject.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6B3B5A391DE2283B00ABD0D2 /* evernoteProjectTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6B3B5A511DE2283B00ABD0D2 /* Build configuration list for PBXNativeTarget "evernoteProjectTests" */;
+			buildPhases = (
+				77E37CE77D261B152CD7F442 /* [CP] Check Pods Manifest.lock */,
+				6B3B5A361DE2283B00ABD0D2 /* Sources */,
+				6B3B5A371DE2283B00ABD0D2 /* Frameworks */,
+				6B3B5A381DE2283B00ABD0D2 /* Resources */,
+				89F2CE45F136912131986BF9 /* [CP] Embed Pods Frameworks */,
+				F977F72E9BEFCB9DC3787663 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6B3B5A3C1DE2283B00ABD0D2 /* PBXTargetDependency */,
+			);
+			name = evernoteProjectTests;
+			productName = evernoteProjectTests;
+			productReference = 6B3B5A3A1DE2283B00ABD0D2 /* evernoteProjectTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		6B3B5A441DE2283B00ABD0D2 /* evernoteProjectUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6B3B5A541DE2283B00ABD0D2 /* Build configuration list for PBXNativeTarget "evernoteProjectUITests" */;
+			buildPhases = (
+				338BB323C149887856D87B18 /* [CP] Check Pods Manifest.lock */,
+				6B3B5A411DE2283B00ABD0D2 /* Sources */,
+				6B3B5A421DE2283B00ABD0D2 /* Frameworks */,
+				6B3B5A431DE2283B00ABD0D2 /* Resources */,
+				CC8EB77C63BE2C02000F9E03 /* [CP] Embed Pods Frameworks */,
+				8B05EDA3129C3C6F1E195624 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6B3B5A471DE2283B00ABD0D2 /* PBXTargetDependency */,
+			);
+			name = evernoteProjectUITests;
+			productName = evernoteProjectUITests;
+			productReference = 6B3B5A451DE2283B00ABD0D2 /* evernoteProjectUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6B3B5A191DE2283A00ABD0D2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "Jose M Paredes";
+				TargetAttributes = {
+					6B3B5A201DE2283A00ABD0D2 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+					};
+					6B3B5A391DE2283B00ABD0D2 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 6B3B5A201DE2283A00ABD0D2;
+					};
+					6B3B5A441DE2283B00ABD0D2 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 6B3B5A201DE2283A00ABD0D2;
+					};
+				};
+			};
+			buildConfigurationList = 6B3B5A1C1DE2283A00ABD0D2 /* Build configuration list for PBXProject "evernoteProject" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6B3B5A181DE2283A00ABD0D2;
+			productRefGroup = 6B3B5A221DE2283B00ABD0D2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6B3B5A201DE2283A00ABD0D2 /* evernoteProject */,
+				6B3B5A391DE2283B00ABD0D2 /* evernoteProjectTests */,
+				6B3B5A441DE2283B00ABD0D2 /* evernoteProjectUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6B3B5A1F1DE2283A00ABD0D2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B3B5A341DE2283B00ABD0D2 /* LaunchScreen.storyboard in Resources */,
+				6B5B24871DE230BB00BB16CF /* Default-568h@2x.png in Resources */,
+				6B82AF9F1DE3869A009C2B75 /* notes.storyboard in Resources */,
+				6B3B5A311DE2283B00ABD0D2 /* Assets.xcassets in Resources */,
+				6B82AF9A1DE38655009C2B75 /* Login.storyboard in Resources */,
+				6B3B5A2F1DE2283B00ABD0D2 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6B3B5A381DE2283B00ABD0D2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6B3B5A431DE2283B00ABD0D2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		14FCAE5621E54EE64319BA47 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-evernoteProject/Pods-evernoteProject-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		30BF1959E2DFF926110C2A15 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-evernoteProject/Pods-evernoteProject-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		338BB323C149887856D87B18 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		77E37CE77D261B152CD7F442 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		89F2CE45F136912131986BF9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-evernoteProjectTests/Pods-evernoteProjectTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8B05EDA3129C3C6F1E195624 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-evernoteProjectUITests/Pods-evernoteProjectUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A01635484E4876CC2C665899 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CC8EB77C63BE2C02000F9E03 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-evernoteProjectUITests/Pods-evernoteProjectUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F977F72E9BEFCB9DC3787663 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-evernoteProjectTests/Pods-evernoteProjectTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6B3B5A1D1DE2283A00ABD0D2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B82AF851DE383B8009C2B75 /* NotesRest.m in Sources */,
+				6B3B5A291DE2283B00ABD0D2 /* AppDelegate.m in Sources */,
+				6B82AF981DE38633009C2B75 /* LoginVC.m in Sources */,
+				6B82AF891DE384E5009C2B75 /* UseCasesBase.m in Sources */,
+				6B82AF951DE3860D009C2B75 /* BaseVC.m in Sources */,
+				6B82AF911DE38594009C2B75 /* LoginUseCase.m in Sources */,
+				6B82AF8D1DE3853F009C2B75 /* NotesUseCase.m in Sources */,
+				6B82AF811DE38382009C2B75 /* LoginRest.m in Sources */,
+				6B3B5A261DE2283B00ABD0D2 /* main.m in Sources */,
+				6B82AF9D1DE3868A009C2B75 /* NotesVC.m in Sources */,
+				6B82AF7D1DE382F5009C2B75 /* RestClient.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6B3B5A361DE2283B00ABD0D2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B3B5A3F1DE2283B00ABD0D2 /* evernoteProjectTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6B3B5A411DE2283B00ABD0D2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B3B5A4A1DE2283B00ABD0D2 /* evernoteProjectUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6B3B5A3C1DE2283B00ABD0D2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6B3B5A201DE2283A00ABD0D2 /* evernoteProject */;
+			targetProxy = 6B3B5A3B1DE2283B00ABD0D2 /* PBXContainerItemProxy */;
+		};
+		6B3B5A471DE2283B00ABD0D2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6B3B5A201DE2283A00ABD0D2 /* evernoteProject */;
+			targetProxy = 6B3B5A461DE2283B00ABD0D2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6B3B5A2D1DE2283B00ABD0D2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6B3B5A2E1DE2283B00ABD0D2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6B3B5A321DE2283B00ABD0D2 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6B3B5A331DE2283B00ABD0D2 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6B3B5A4C1DE2283B00ABD0D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		6B3B5A4D1DE2283B00ABD0D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6B3B5A4F1DE2283B00ABD0D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F2092B601A019F0E6242B35C /* Pods-evernoteProject.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = evernoteProject/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jmpg.evernoteProject;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		6B3B5A501DE2283B00ABD0D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8D1A6325EB51858044A7C967 /* Pods-evernoteProject.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = evernoteProject/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jmpg.evernoteProject;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		6B3B5A521DE2283B00ABD0D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F93BF62E6421AE527E9C8F2B /* Pods-evernoteProjectTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = evernoteProjectTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jmpg.evernoteProjectTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/evernoteProject.app/evernoteProject";
+			};
+			name = Debug;
+		};
+		6B3B5A531DE2283B00ABD0D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B2F29BB8A1058C679102AD38 /* Pods-evernoteProjectTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = evernoteProjectTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jmpg.evernoteProjectTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/evernoteProject.app/evernoteProject";
+			};
+			name = Release;
+		};
+		6B3B5A551DE2283B00ABD0D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 81CF1A0F83CC6D9CD3FDBECE /* Pods-evernoteProjectUITests.debug.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = evernoteProjectUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jmpg.evernoteProjectUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = evernoteProject;
+			};
+			name = Debug;
+		};
+		6B3B5A561DE2283B00ABD0D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FAA7E7D1720D26658D17EB10 /* Pods-evernoteProjectUITests.release.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = evernoteProjectUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jmpg.evernoteProjectUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = evernoteProject;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6B3B5A1C1DE2283A00ABD0D2 /* Build configuration list for PBXProject "evernoteProject" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6B3B5A4C1DE2283B00ABD0D2 /* Debug */,
+				6B3B5A4D1DE2283B00ABD0D2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6B3B5A4E1DE2283B00ABD0D2 /* Build configuration list for PBXNativeTarget "evernoteProject" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6B3B5A4F1DE2283B00ABD0D2 /* Debug */,
+				6B3B5A501DE2283B00ABD0D2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6B3B5A511DE2283B00ABD0D2 /* Build configuration list for PBXNativeTarget "evernoteProjectTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6B3B5A521DE2283B00ABD0D2 /* Debug */,
+				6B3B5A531DE2283B00ABD0D2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6B3B5A541DE2283B00ABD0D2 /* Build configuration list for PBXNativeTarget "evernoteProjectUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6B3B5A551DE2283B00ABD0D2 /* Debug */,
+				6B3B5A561DE2283B00ABD0D2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6B3B5A191DE2283A00ABD0D2 /* Project object */;
+}
