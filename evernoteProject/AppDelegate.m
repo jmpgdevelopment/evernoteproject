@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "Config.h"
 #import <evernote-cloud-sdk-ios/ENSDK.h>
+#import <evernote-cloud-sdk-ios/ENSession.h>
 #import <AFNetworking/AFNetworkActivityIndicatorManager.h>
 
 @interface AppDelegate ()
@@ -17,9 +18,18 @@
 
 @implementation AppDelegate
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+
+    [ENSession setSharedSessionConsumerKey:k_ConsumerKey
+                            consumerSecret:k_ConsumerSecret
+                              optionalHost:ENSessionHostSandbox];
+
     return YES;
+}
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+
+    return [[ENSession sharedSession] handleOpenURL:url];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

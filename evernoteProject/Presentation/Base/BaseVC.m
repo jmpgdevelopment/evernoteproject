@@ -7,31 +7,57 @@
 //
 
 #import "BaseVC.h"
+#import <JGProgressHUD/JGProgressHUD.h>
 
 @interface BaseVC ()
 
+@property (nonatomic, strong) JGProgressHUD *HUD;
+
 @end
+
+#pragma mark - UIViewController
 
 @implementation BaseVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
+    self.HUD = [JGProgressHUD progressHUDWithStyle:JGProgressHUDStyleDark];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#pragma mark - UI Messages
+
+- (void)showLoading {
+
+    self.HUD.textLabel.text = @"Loading";
+    [self.HUD showInView:self.view];
 }
 
-/*
-#pragma mark - Navigation
+- (void)dismissLoading  {
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    [self.HUD dismiss];
 }
-*/
+
+- (void)showMessage:(NSString *)message {
+
+    self.HUD.textLabel.text = message;
+    [self.HUD showInView:self.view];
+    [self.HUD dismissAfterDelay:3.0];
+}
+
+- (void)showSuccess {
+
+    self.HUD.indicatorView = [[JGProgressHUDPieIndicatorView alloc] initWithHUDStyle:self.HUD.style];
+    [self.HUD showInView:self.view];
+    [self.HUD dismissAfterDelay:3.0];
+}
+
+- (void)showError:(NSError *)error  {
+
+    self.HUD.textLabel.text = @"Error";
+    self.HUD.indicatorView = [[JGProgressHUDPieIndicatorView alloc] init];
+    [self.HUD showInView:self.view];
+    [self.HUD dismissAfterDelay:3.0];
+}
 
 @end
