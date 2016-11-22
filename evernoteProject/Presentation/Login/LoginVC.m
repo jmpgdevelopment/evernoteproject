@@ -12,7 +12,7 @@
 
 @interface LoginVC ()
 
-@property (weak, nonatomic) IBOutlet UIButton *loginButton;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *LoginButtonItem;
 
 @end
 
@@ -30,7 +30,13 @@
 
 - (void)configView  {
 
-    self.navigationController.title = @"Login";
+    self.title = @"LOGIN";
+    [self configLoginButton];
+}
+
+- (void)configLoginButton   {
+
+    self.LoginButtonItem.title = [[ENSession sharedSession] isAuthenticated] ? @"Logout" : @"login";
 }
 
 #pragma mark - UI Actions
@@ -51,15 +57,5 @@
                                                        }];
     }
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

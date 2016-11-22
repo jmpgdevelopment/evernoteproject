@@ -11,7 +11,6 @@
 		4B75F27B71A9B6E383194DD6 /* libPods-evernoteProjectTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FAE18F58AF250B3935FDEFB /* libPods-evernoteProjectTests.a */; };
 		6B3B5A261DE2283B00ABD0D2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B3B5A251DE2283B00ABD0D2 /* main.m */; };
 		6B3B5A291DE2283B00ABD0D2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B3B5A281DE2283B00ABD0D2 /* AppDelegate.m */; };
-		6B3B5A2F1DE2283B00ABD0D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B3B5A2D1DE2283B00ABD0D2 /* Main.storyboard */; };
 		6B3B5A311DE2283B00ABD0D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B3B5A301DE2283B00ABD0D2 /* Assets.xcassets */; };
 		6B3B5A341DE2283B00ABD0D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B3B5A321DE2283B00ABD0D2 /* LaunchScreen.storyboard */; };
 		6B3B5A3F1DE2283B00ABD0D2 /* evernoteProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B3B5A3E1DE2283B00ABD0D2 /* evernoteProjectTests.m */; };
@@ -55,7 +54,6 @@
 		6B3B5A251DE2283B00ABD0D2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6B3B5A271DE2283B00ABD0D2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6B3B5A281DE2283B00ABD0D2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		6B3B5A2E1DE2283B00ABD0D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6B3B5A301DE2283B00ABD0D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6B3B5A331DE2283B00ABD0D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6B3B5A351DE2283B00ABD0D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -178,7 +176,6 @@
 				6B82AF6F1DE38177009C2B75 /* Business */,
 				6B82AF701DE38181009C2B75 /* DataAccess */,
 				6B82AF711DE381A7009C2B75 /* Resources */,
-				6B3B5A2D1DE2283B00ABD0D2 /* Main.storyboard */,
 				6B3B5A241DE2283B00ABD0D2 /* Supporting Files */,
 			);
 			path = evernoteProject;
@@ -481,7 +478,6 @@
 				6B82AF9F1DE3869A009C2B75 /* notes.storyboard in Resources */,
 				6B3B5A311DE2283B00ABD0D2 /* Assets.xcassets in Resources */,
 				6B82AF9A1DE38655009C2B75 /* Login.storyboard in Resources */,
-				6B3B5A2F1DE2283B00ABD0D2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -690,14 +686,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		6B3B5A2D1DE2283B00ABD0D2 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6B3B5A2E1DE2283B00ABD0D2 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		6B3B5A321DE2283B00ABD0D2 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
