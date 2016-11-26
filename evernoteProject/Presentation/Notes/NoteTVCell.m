@@ -11,7 +11,6 @@
 @interface NoteTVCell ()
 
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
-@property (weak, nonatomic) IBOutlet UITextView *textNoteTextView;
 
 @end
 

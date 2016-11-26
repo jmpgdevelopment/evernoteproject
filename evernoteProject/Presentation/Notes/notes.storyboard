@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -55,11 +56,28 @@
                             <outlet property="delegate" destination="Dz8-sc-kjF" id="ScK-Af-etI"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="gcb-RU-Xye"/>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="gcb-RU-Xye">
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="add" id="7Cr-9b-OJG" userLabel="AddNoteItem"/>
+                            <barButtonItem title="Filter" id="umc-Wf-EKY" userLabel="FilterNoteItem">
+                                <connections>
+                                    <segue destination="4Az-AI-iIo" kind="presentation" id="3nE-X6-CD0"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lvY-Fp-q8q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-84" y="-114.69265367316342"/>
+        </scene>
+        <!--notesFilter-->
+        <scene sceneID="lk7-5n-NGb">
+            <objects>
+                <viewControllerPlaceholder storyboardName="notesFilter" id="4Az-AI-iIo" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HM4-Mx-nj7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="704" y="-234"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cIz-tN-0kr">

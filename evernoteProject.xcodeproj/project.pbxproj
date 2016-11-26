@@ -27,10 +27,14 @@
 		6B82AF9A1DE38655009C2B75 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B82AF991DE38655009C2B75 /* Login.storyboard */; };
 		6B82AFA31DE39CB0009C2B75 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B82AFA21DE39CB0009C2B75 /* MobileCoreServices.framework */; };
 		6B90FD831DE793EA007F542B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6B90FD821DE793EA007F542B /* Localizable.strings */; };
+		6BA4C2051DEA032500C7D6E3 /* notesFilter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BA4C2041DEA032500C7D6E3 /* notesFilter.storyboard */; };
 		6BB4C15A1DE8C268004E5DC1 /* notes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BB4C1571DE8C268004E5DC1 /* notes.storyboard */; };
 		6BB4C15B1DE8C268004E5DC1 /* NotesTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB4C1591DE8C268004E5DC1 /* NotesTableVC.m */; };
 		6BB4C15E1DE8C2BB004E5DC1 /* NoteTVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB4C15D1DE8C2BB004E5DC1 /* NoteTVCell.m */; };
 		6BB4C1611DE8D8CF004E5DC1 /* BaseTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB4C1601DE8D8CF004E5DC1 /* BaseTableVC.m */; };
+		6BD1C7E31DEA07E4008F6193 /* NotesFilterModalTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD1C7E21DEA07E4008F6193 /* NotesFilterModalTVC.m */; };
+		6BD1C7E61DEA085A008F6193 /* NoteFilterTVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD1C7E51DEA085A008F6193 /* NoteFilterTVCell.m */; };
+		6BD1C7ED1DEA0C94008F6193 /* NoteFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD1C7EC1DEA0C94008F6193 /* NoteFilter.m */; };
 		6BF4F8FF1DE4CFA700F58EA2 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BF4F8FE1DE4CFA700F58EA2 /* CoreData.framework */; };
 		ACA4A79237D4727034347378 /* libPods-evernoteProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E7EF8D8DA0FF8984CDB24E1D /* libPods-evernoteProject.a */; };
 /* End PBXBuildFile section */
@@ -95,6 +99,7 @@
 		6B82AFA21DE39CB0009C2B75 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		6B82AFA41DE39CC9009C2B75 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
 		6B90FD821DE793EA007F542B /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = Resources/Localizable.strings; sourceTree = "<group>"; };
+		6BA4C2041DEA032500C7D6E3 /* notesFilter.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = notesFilter.storyboard; path = Presentation/Notes/Filter/notesFilter.storyboard; sourceTree = "<group>"; };
 		6BB4C1571DE8C268004E5DC1 /* notes.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = notes.storyboard; path = Presentation/Notes/notes.storyboard; sourceTree = "<group>"; };
 		6BB4C1581DE8C268004E5DC1 /* NotesTableVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NotesTableVC.h; path = Presentation/Notes/NotesTableVC.h; sourceTree = "<group>"; };
 		6BB4C1591DE8C268004E5DC1 /* NotesTableVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NotesTableVC.m; path = Presentation/Notes/NotesTableVC.m; sourceTree = "<group>"; };
@@ -103,6 +108,12 @@
 		6BB4C15F1DE8D8CF004E5DC1 /* BaseTableVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseTableVC.h; path = Presentation/Base/BaseTableVC.h; sourceTree = "<group>"; };
 		6BB4C1601DE8D8CF004E5DC1 /* BaseTableVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseTableVC.m; path = Presentation/Base/BaseTableVC.m; sourceTree = "<group>"; };
 		6BB4C1621DE9BAAF004E5DC1 /* UseCasesBaseInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = UseCasesBaseInterface.h; path = Business/UseCases/UseCasesBaseInterface.h; sourceTree = "<group>"; };
+		6BD1C7E11DEA07E4008F6193 /* NotesFilterModalTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NotesFilterModalTVC.h; path = Presentation/Notes/Filter/NotesFilterModalTVC.h; sourceTree = "<group>"; };
+		6BD1C7E21DEA07E4008F6193 /* NotesFilterModalTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NotesFilterModalTVC.m; path = Presentation/Notes/Filter/NotesFilterModalTVC.m; sourceTree = "<group>"; };
+		6BD1C7E41DEA085A008F6193 /* NoteFilterTVCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NoteFilterTVCell.h; path = Presentation/Notes/Filter/NoteFilterTVCell.h; sourceTree = "<group>"; };
+		6BD1C7E51DEA085A008F6193 /* NoteFilterTVCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NoteFilterTVCell.m; path = Presentation/Notes/Filter/NoteFilterTVCell.m; sourceTree = "<group>"; };
+		6BD1C7EB1DEA0C94008F6193 /* NoteFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NoteFilter.h; path = Entities/NoteFilter.h; sourceTree = "<group>"; };
+		6BD1C7EC1DEA0C94008F6193 /* NoteFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NoteFilter.m; path = Entities/NoteFilter.m; sourceTree = "<group>"; };
 		6BF4F8FE1DE4CFA700F58EA2 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		81CF1A0F83CC6D9CD3FDBECE /* Pods-evernoteProjectUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-evernoteProjectUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-evernoteProjectUITests/Pods-evernoteProjectUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		8D1A6325EB51858044A7C967 /* Pods-evernoteProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-evernoteProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-evernoteProject/Pods-evernoteProject.release.xcconfig"; sourceTree = "<group>"; };
@@ -182,6 +193,7 @@
 		6B3B5A231DE2283B00ABD0D2 /* evernoteProject */ = {
 			isa = PBXGroup;
 			children = (
+				6BD1C7E71DEA0B8A008F6193 /* Entities */,
 				6B82AFA01DE38722009C2B75 /* Application */,
 				6B82AF6E1DE38134009C2B75 /* Presentation */,
 				6B82AF6F1DE38177009C2B75 /* Business */,
@@ -284,6 +296,7 @@
 				6BB4C1591DE8C268004E5DC1 /* NotesTableVC.m */,
 				6BB4C15C1DE8C2BB004E5DC1 /* NoteTVCell.h */,
 				6BB4C15D1DE8C2BB004E5DC1 /* NoteTVCell.m */,
+				6BA4C2001DEA00FF00C7D6E3 /* Filter */,
 			);
 			name = Notes;
 			sourceTree = "<group>";
@@ -362,6 +375,27 @@
 				6B16BDD61DE9D86E006DAE84 /* AppDependencies.m */,
 			);
 			name = Application;
+			sourceTree = "<group>";
+		};
+		6BA4C2001DEA00FF00C7D6E3 /* Filter */ = {
+			isa = PBXGroup;
+			children = (
+				6BA4C2041DEA032500C7D6E3 /* notesFilter.storyboard */,
+				6BD1C7E11DEA07E4008F6193 /* NotesFilterModalTVC.h */,
+				6BD1C7E21DEA07E4008F6193 /* NotesFilterModalTVC.m */,
+				6BD1C7E41DEA085A008F6193 /* NoteFilterTVCell.h */,
+				6BD1C7E51DEA085A008F6193 /* NoteFilterTVCell.m */,
+			);
+			name = Filter;
+			sourceTree = "<group>";
+		};
+		6BD1C7E71DEA0B8A008F6193 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				6BD1C7EB1DEA0C94008F6193 /* NoteFilter.h */,
+				6BD1C7EC1DEA0C94008F6193 /* NoteFilter.m */,
+			);
+			name = Entities;
 			sourceTree = "<group>";
 		};
 		E35848B365F7A8B555C63473 /* Pods */ = {
@@ -496,6 +530,7 @@
 				6B3B5A341DE2283B00ABD0D2 /* LaunchScreen.storyboard in Resources */,
 				6B3B5A311DE2283B00ABD0D2 /* Assets.xcassets in Resources */,
 				6BB4C15A1DE8C268004E5DC1 /* notes.storyboard in Resources */,
+				6BA4C2051DEA032500C7D6E3 /* notesFilter.storyboard in Resources */,
 				6B82AF9A1DE38655009C2B75 /* Login.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -662,10 +697,13 @@
 				6B82AF851DE383B8009C2B75 /* NotesRest.m in Sources */,
 				6B3B5A291DE2283B00ABD0D2 /* AppDelegate.m in Sources */,
 				6BB4C1611DE8D8CF004E5DC1 /* BaseTableVC.m in Sources */,
+				6BD1C7E61DEA085A008F6193 /* NoteFilterTVCell.m in Sources */,
+				6BD1C7E31DEA07E4008F6193 /* NotesFilterModalTVC.m in Sources */,
 				6B82AF981DE38633009C2B75 /* LoginVC.m in Sources */,
 				6BB4C15B1DE8C268004E5DC1 /* NotesTableVC.m in Sources */,
 				6B82AF891DE384E5009C2B75 /* UseCasesBase.m in Sources */,
 				6B16BDD71DE9D86E006DAE84 /* AppDependencies.m in Sources */,
+				6BD1C7ED1DEA0C94008F6193 /* NoteFilter.m in Sources */,
 				6B82AF951DE3860D009C2B75 /* BaseVC.m in Sources */,
 				6B82AF911DE38594009C2B75 /* LoginUseCase.m in Sources */,
 				6BB4C15E1DE8C2BB004E5DC1 /* NoteTVCell.m in Sources */,
