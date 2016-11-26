@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BaseVC : UIViewController <UINavigationControllerDelegate>
+@interface BaseVC : UIViewController
 
 - (void)showLoading;
 - (void)dismissLoading;
