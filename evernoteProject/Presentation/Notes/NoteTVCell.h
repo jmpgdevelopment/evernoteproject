@@ -13,5 +13,6 @@
 @interface NoteTVCell : UITableViewCell
 
 - (void)updateCellWith:(ENNote *)note;
+- (void)resetCell;
 
 @end
