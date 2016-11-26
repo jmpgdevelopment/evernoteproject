@@ -10,6 +10,7 @@
 #import <evernote-cloud-sdk-ios/ENSDK.h>
 #import <evernote-cloud-sdk-ios/ENSession.h>
 #import <evernote-cloud-sdk-ios/EDAMNoteStore.h>
+#import "AppDependencies.h"
 #import "Config.h"
 
 @interface NotesTableVC ()
@@ -17,7 +18,8 @@
 @property (nonatomic, strong) ENNoteSearch *noteSearch;
 @property (nonatomic, strong) ENNotebook *notebook;
 @property (nonatomic, strong) NSArray *notesArray;
-@property (nonatomic, strong) NSArray *notebookArray;
+@property (nonatomic, strong) NSArray *notebooksArray;
+@property (nonatomic, strong) NSError *error;
 
 @end
 
@@ -39,30 +41,33 @@
 
 - (void)configNotesTV  {
 
-    self.notesArray = [self getNotesFromNotebook:[self.notebookArray objectAtIndex:0]];
+    [self getNotebooksArray];
+    [self getNotesArrayFromNotebook:self.notebooksArray[0]];
 }
 
-- (NSArray *)getNotesFromNotebook:(ENNotebook *)notebook    {
+- (void)getNotebooksArray	{
 
-    __block NSArray *notes = [[NSArray alloc] init];
-
-    ENNoteSearch *noteSearch  = [[ENNoteSearch alloc] initWithSearchString:@""];
-    [[ENSession sharedSession] findNotesWithSearch:noteSearch inNotebook:nil orScope:ENSessionSearchScopeAll sortOrder:ENSessionSortOrderTitle maxResults:0 completion:^(NSArray *findNotesResults, NSError *findNotesError) {
-
-        if (!findNotesResults) {
-            NSLog(@"findNotesError: %@", findNotesError);
-        } else if (findNotesResults.count == 0) {
-            [self showMessage:@"Notes not found"];
-        } else {
-            notes = findNotesResults;
-            NSLog(@"notesArray:  %@", notes);
-            [self.tableView reloadData];
-        }
+    [self showLoading];
+    [[AppDependencies sharedInstance].notesUseCases getNotebooksWithSuccess:^(NSArray *notebooks) {
+        [self dismissLoading];
+        self.notebooksArray = notebooks;
+    } failure:^(NSError *error) {
+        [self dismissLoading];
+        [self showError:error];
     }];
-
-    return notes;
 }
 
+- (void)getNotesArrayFromNotebook:(ENNotebook *)notebook {
+
+    [self showLoading];
+    [[AppDependencies sharedInstance].notesUseCases getNotesFromNotebook:notebook success:^(NSArray *notes) {
+        [self dismissLoading];
+        self.notesArray = notes;
+    } failure:^(NSError *error) {
+        [self dismissLoading];
+        [self showError:error];
+    }];
+}
 #pragma mark - UITableVieDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
