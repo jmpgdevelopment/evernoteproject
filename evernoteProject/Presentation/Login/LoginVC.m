@@ -12,17 +12,19 @@
 
 @interface LoginVC ()
 
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *LoginButtonItem;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *loginButtonItem;
+@property (weak, nonatomic) IBOutlet UIButton *notesButton;
 
 @end
 
-@implementation LoginVC
+@implementation LoginVC 
 
 #pragma mark - UIViewController
 
 - (void)viewDidLoad {
 
     [super viewDidLoad];
+    self.navigationItem.title = NSLocalizedString(@"login", @"login");
     [self configView];
 }
 
@@ -30,13 +32,19 @@
 
 - (void)configView  {
 
-    self.title = @"LOGIN";
     [self configLoginButton];
+    [self configNotesButton];
 }
 
 - (void)configLoginButton   {
 
-    self.LoginButtonItem.title = [[ENSession sharedSession] isAuthenticated] ? @"Logout" : @"login";
+    self.loginButtonItem.title = [[ENSession sharedSession] isAuthenticated] ? @"Logout" : @"login";
+}
+
+- (void)configNotesButton   {
+
+    self.notesButton.titleLabel.text = NSLocalizedString(@"notes", @"notes");
+    self.notesButton.hidden = ![[ENSession sharedSession] isAuthenticated];
 }
 
 #pragma mark - UI Actions
@@ -45,6 +53,7 @@
 
     if ([[ENSession sharedSession] isAuthenticated]) {
         [[ENSession sharedSession] unauthenticate];
+        [self configLoginButton];
     } else {
         [[ENSession sharedSession] authenticateWithViewController:self
                                                preferRegistration:NO

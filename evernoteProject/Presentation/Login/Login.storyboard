@@ -33,22 +33,41 @@
                     <view key="view" contentMode="scaleToFill" id="IJn-4S-Qgz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sMl-ez-msz">
+                                <frame key="frameInset" minX="133" minY="99" width="108" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Notes"/>
+                                <connections>
+                                    <segue destination="KPh-aI-001" kind="show" id="beL-5f-Xqh"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="jqa-u1-CQK">
                         <barButtonItem key="rightBarButtonItem" title="Login" id="JZV-Qz-Taf">
                             <connections>
-                                <action selector="LoginAction:" destination="JEc-ke-hE8" id="C8M-qb-dyr"/>
+                                <action selector="LoginAction:" destination="JEc-ke-hE8" id="Abb-vV-Idh"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="LoginButtonItem" destination="JZV-Qz-Taf" id="qWB-hZ-WuY"/>
+                        <outlet property="loginButtonItem" destination="JZV-Qz-Taf" id="fan-Mn-tgS"/>
+                        <outlet property="notesButton" destination="sMl-ez-msz" id="vPq-Cn-sjS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4HI-rc-hhl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1009" y="-171"/>
+            <point key="canvasLocation" x="-703.20000000000005" y="-283.80809595202402"/>
+        </scene>
+        <!--notes-->
+        <scene sceneID="guN-dG-uj1">
+            <objects>
+                <viewControllerPlaceholder storyboardName="notes" id="KPh-aI-001" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qbn-xv-AJf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="223" y="-375"/>
         </scene>
     </scenes>
 </document>
