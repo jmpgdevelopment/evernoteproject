@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <evernote-cloud-sdk-ios/ENSDK.h>
+#import <evernote-cloud-sdk-ios/ENSession.h>
 
 @interface NoteTVCell : UITableViewCell
+
+- (void)updateCellWith:(ENNote *)note;
 
 @end

@@ -8,17 +8,26 @@
 
 #import "NoteTVCell.h"
 
+@interface NoteTVCell ()
+
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UITextView *textNoteTextView;
+
+@end
+
 @implementation NoteTVCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    // Initialization code
+}
+
+- (void)updateCellWith:(ENNote *)note   {
+    
+    self.titleLabel.text = note.title;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
 }
 
 @end
