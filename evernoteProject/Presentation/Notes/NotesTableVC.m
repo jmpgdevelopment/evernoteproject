@@ -11,6 +11,7 @@
 #import <evernote-cloud-sdk-ios/ENSession.h>
 #import <evernote-cloud-sdk-ios/EDAMNoteStore.h>
 #import "AppDependencies.h"
+#import "NoteTVCell.h"
 #import "Config.h"
 
 @interface NotesTableVC ()
@@ -63,6 +64,7 @@
     [[AppDependencies sharedInstance].notesUseCases getNotesFromNotebook:notebook success:^(NSArray *notes) {
         [self dismissLoading];
         self.notesArray = notes;
+        [self.tableView reloadData];
     } failure:^(NSError *error) {
         [self dismissLoading];
         [self showError:error];
@@ -76,13 +78,15 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
-    return 10;
+    return self.notesArray ? self.notesArray.count : 0;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"noteTVCell" forIndexPath:indexPath];
-    
+
+    NoteTVCell *cell = [tableView dequeueReusableCellWithIdentifier:@"noteTVCell" forIndexPath:indexPath];
+    [cell updateCellWith:self.notesArray[indexPath.row]];
+
     return cell;
 }
 
