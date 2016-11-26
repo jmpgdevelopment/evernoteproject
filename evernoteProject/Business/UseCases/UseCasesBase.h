@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "UseCasesBaseInterface.h"
 
-@interface UseCasesBase : NSObject
+@interface UseCasesBase : NSObject <UseCasesBaseInterface>
 
 @end
