@@ -6,8 +6,20 @@
 //  Copyright © 2016 Jose M Paredes. All rights reserved.
 //
 
-#ifndef NotesUseCaseInterface_h
-#define NotesUseCaseInterface_h
+#import "UseCasesBaseInterface.h"
+#import <evernote-cloud-sdk-ios/ENSDK.h>
 
+@protocol NotesUseCaseInterface <UseCasesBaseInterface>
 
-#endif /* NotesUseCaseInterface_h */
+- (void)getNotebooksWithSuccess:(void (^)(NSArray *))success
+                        failure:(void (^)(NSError *))failure;
+
+- (void)getNotesFromNotebook:(ENNotebook *)notebook
+                          success:(void (^)(NSArray *))success
+                          failure:(void (^)(NSError *))failure;
+
+- (void)createNote:(ENNote *)note
+           success:(void (^)(ENNoteRef *))success
+           failure:(void (^)(NSError *))failure;
+
+@end

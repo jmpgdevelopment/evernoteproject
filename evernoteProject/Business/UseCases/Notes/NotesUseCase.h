@@ -7,7 +7,8 @@
 //
 
 #import "UseCasesBase.h"
+#import "NotesUseCaseInterface.h"
 
-@interface NotesUseCase : UseCasesBase
+@interface NotesUseCase : UseCasesBase <NotesUseCaseInterface>
 
 @end
