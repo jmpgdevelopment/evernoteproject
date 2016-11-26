@@ -15,8 +15,9 @@
                         failure:(void (^)(NSError *))failure;
 
 - (void)getNotesFromNotebook:(ENNotebook *)notebook
-                          success:(void (^)(NSArray *))success
-                          failure:(void (^)(NSError *))failure;
+                   sortOrder:(ENSessionSortOrder *)sortOrder
+                     success:(void (^)(NSArray *))success
+                     failure:(void (^)(NSError *))failure;
 
 - (void)createNote:(ENNote *)note
            success:(void (^)(ENNoteRef *))success

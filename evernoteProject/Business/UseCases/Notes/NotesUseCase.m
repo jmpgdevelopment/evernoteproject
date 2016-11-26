@@ -27,6 +27,7 @@
 }
 
 - (void)getNotesFromNotebook:(ENNotebook *)notebook
+                   sortOrder:(ENSessionSortOrder *)sortOrder
                           success:(void (^)(NSArray *))success
                           failure:(void (^)(NSError *))failure  {
 
@@ -34,7 +35,7 @@
     [[ENSession sharedSession] findNotesWithSearch:noteSearch
                                         inNotebook:nil
                                            orScope:ENSessionSearchScopeAll
-                                         sortOrder:ENSessionSortOrderTitle
+                                         sortOrder:sortOrder
                                         maxResults:0
                                         completion:^(NSArray *findNotesResults, NSError *findNotesError) {
 
