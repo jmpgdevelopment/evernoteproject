@@ -7,8 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <evernote-cloud-sdk-ios/ENSession.h>
 #import "BaseTableVC.h"
+#import "NotesFilterModalTVC.h"
 
-@interface NotesTableVC : BaseTableVC
+@interface NotesTableVC : BaseTableVC <NotesFilterProtocol>
+
+@property (nonatomic) ENSessionSortOrder *sortOrder;
 
 @end

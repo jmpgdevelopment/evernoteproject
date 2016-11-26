@@ -8,11 +8,10 @@
 
 #import "NotesTableVC.h"
 #import <evernote-cloud-sdk-ios/ENSDK.h>
-#import <evernote-cloud-sdk-ios/ENSession.h>
 #import <evernote-cloud-sdk-ios/EDAMNoteStore.h>
 #import "AppDependencies.h"
 #import "NoteTVCell.h"
-#import "Config.h"
+#import "NotesFilterModalTVC.h"
 
 @interface NotesTableVC ()
 
@@ -30,6 +29,7 @@
 
     [super viewDidLoad];
     [self configView];
+    self.sortOrder = (NSUInteger *)ENSessionSortOrderTitle;
 }
 
 - (void)configView  {
@@ -43,36 +43,52 @@
 - (void)configNotesTV  {
 
     [self getNotebooksArray];
-    [self getNotesArrayFromNotebook:self.notebooksArray[0]];
+    [self getNotesArrayFromNotebook:self.notebooksArray[0] sortOrder:self.sortOrder];
 }
 
 - (void)getNotebooksArray	{
 
     [self showLoading];
     [[AppDependencies sharedInstance].notesUseCases getNotebooksWithSuccess:^(NSArray *notebooks) {
+
         [self dismissLoading];
         self.notebooksArray = notebooks;
     } failure:^(NSError *error) {
+
         [self dismissLoading];
         [self showError:error];
     }];
 }
 
-- (void)getNotesArrayFromNotebook:(ENNotebook *)notebook {
+- (void)getNotesArrayFromNotebook:(ENNotebook *)notebook
+                        sortOrder:(NSUInteger *)sortOrder   {
 
     [self showLoading];
-    [[AppDependencies sharedInstance].notesUseCases getNotesFromNotebook:notebook success:^(NSArray *notes) {
-        [self dismissLoading];
-        self.notesArray = notes;
-        [self.tableView reloadData];
-    } failure:^(NSError *error) {
-        [self dismissLoading];
-        [self showError:error];
-    }];
+    [[AppDependencies sharedInstance].notesUseCases getNotesFromNotebook:notebook
+                                                               sortOrder:sortOrder
+                                                                 success:^(NSArray *notes) {
+
+                                                                     [self dismissLoading];
+                                                                     self.notesArray = notes;
+                                                                     [self.tableView reloadData];
+                                                                 } failure:^(NSError *error) {
+
+                                                                     [self dismissLoading];
+                                                                     [self showError:error];
+                                                                 }];
 }
+
+#pragma mark - NoteFilterProtocol
+
+- (void)refreshNotes:(UITableViewController *)controller didFinishSettingFilter:(ENSessionSortOrder *)sortOrder	{
+
+    [self getNotesArrayFromNotebook:self.notebooksArray[0] sortOrder:sortOrder];
+}
+
 #pragma mark - UITableVieDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    
     return 1;
 }
 
@@ -85,54 +101,30 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 
     NoteTVCell *cell = [tableView dequeueReusableCellWithIdentifier:@"noteTVCell" forIndexPath:indexPath];
+    
+    [cell resetCell];
     [cell updateCellWith:self.notesArray[indexPath.row]];
 
     return cell;
 }
 
+#pragma mark - UITableViewDelegate
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+
+    NSLog(@"Title: %@", [self.notesArray[indexPath.row] title]);
 }
-*/
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
 #pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+
+    if ([segue.identifier isEqualToString:@"notesFilterSegue"]) {
+        UINavigationController *nav = [segue destinationViewController];
+        NotesFilterModalTVC *notesFilterTVC = (NotesFilterModalTVC *)nav.topViewController;
+        notesFilterTVC.delegate = self;
+    }
 }
-*/
+
 
 @end

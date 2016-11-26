@@ -10,7 +10,7 @@
         <!--Root View Controller-->
         <scene sceneID="weG-W1-Vl3">
             <objects>
-                <tableViewController id="Dz8-sc-kjF" customClass="NotesTableVC" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="notesTableVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Dz8-sc-kjF" customClass="NotesTableVC" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="51" sectionHeaderHeight="28" sectionFooterHeight="28" id="cv5-Ah-Qxe">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -61,7 +61,7 @@
                             <barButtonItem systemItem="add" id="7Cr-9b-OJG" userLabel="AddNoteItem"/>
                             <barButtonItem title="Filter" id="umc-Wf-EKY" userLabel="FilterNoteItem">
                                 <connections>
-                                    <segue destination="4Az-AI-iIo" kind="presentation" id="3nE-X6-CD0"/>
+                                    <segue destination="4Az-AI-iIo" kind="presentation" identifier="notesFilterSegue" id="3nE-X6-CD0"/>
                                 </connections>
                             </barButtonItem>
                         </rightBarButtonItems>
