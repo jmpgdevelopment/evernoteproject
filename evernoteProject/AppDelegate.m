@@ -20,9 +20,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
-    [ENSession setSharedSessionConsumerKey:k_ConsumerKey
-                            consumerSecret:k_ConsumerSecret
-                              optionalHost:ENSessionHostSandbox];
+//    [ENSession setSharedSessionConsumerKey:k_ConsumerKey
+//                            consumerSecret:k_ConsumerSecret
+//                              optionalHost:ENSessionHostSandbox];
+
+    [ENSession setSharedSessionDeveloperToken:k_DeveloperToken
+                                 noteStoreUrl:k_NoteStoreURL];
 
     return YES;
 }
