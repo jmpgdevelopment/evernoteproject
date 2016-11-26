@@ -10,12 +10,14 @@
 #import "NoteFilterTVCell.h"
 #import "NoteFilter.h"
 #import "NotesTableVC.h"
+#import "NoteFilterTVCell.h"
 
 @interface NotesFilterModalTVC ()
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *okButton;
+
 @property (nonatomic, strong) NSArray *filterLabelsArray;
-@property (nonatomic, strong) NSArray *filterSwitchArray;
+@property (nonatomic) ENSessionSortOrder *sortOrder;
 
 @end
 
@@ -37,17 +39,18 @@
 - (void)getFilterOptions    {
 
     self.filterLabelsArray = @[@"Order by title", @"Order By Creation", @"Order By Modified"];
-    self.filterSwitchArray = @[@1, @0, @0];
     [self.tableView reloadData];
     [self dismissLoading];
 }
 
 - (IBAction)okAction:(id)sender {
-    [self dismissViewControllerAnimated:YES
-                             completion:^{
-                                 NotesTableVC *notesTVC = [[NotesTableVC alloc] init];
-                                 [notesTVC.tableView reloadData];
-                             }];
+
+    [self dismissViewControllerAnimated:YES completion:^{
+
+        UIStoryboard *notesStoryboard = [UIStoryboard storyboardWithName:@"notes" bundle:nil];
+        NotesTableVC *noteTableVC = [notesStoryboard instantiateViewControllerWithIdentifier:@"notesTableVC"];
+        [self.delegate refreshNotes:noteTableVC didFinishSettingFilter:self.sortOrder];
+    }];
 }
 
 #pragma mark - UITableViewDataSource
@@ -68,11 +71,30 @@
     NoteFilterTVCell *cell = [tableView dequeueReusableCellWithIdentifier:@"noteFilterTVCell" forIndexPath:indexPath];
     NoteFilter *noteFilter = [[NoteFilter alloc] init];
     noteFilter.optionLabel = self.filterLabelsArray[indexPath.row];
-    noteFilter.filterActivedSwitch = self.filterSwitchArray[indexPath.row];
+
     [cell updateCellWith:noteFilter];
 
     return cell;
 }
+
+#pragma mark - UITableViewDelegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+
+    NSLog(@"Title: %@", self.filterLabelsArray[indexPath.row]);
+    switch (indexPath.row) {
+        case 0:
+            self.sortOrder = (NSUInteger *)ENSessionSortOrderTitle;
+            break;
+        case 1:
+            self.sortOrder = (NSUInteger *)ENSessionSortOrderRecentlyCreated;
+            break;
+        case 2:
+            self.sortOrder = (NSUInteger *)ENSessionSortOrderRecentlyUpdated;
+            break;
+    }
+}
+
 
 /*
 // Override to support conditional editing of the table view.

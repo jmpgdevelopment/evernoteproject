@@ -15,33 +15,30 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.33725490196078434" green="0.59607843137254901" blue="0.20392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="noteFilterTVCell" rowHeight="59" id="cSH-3w-Quf" customClass="NoteFilterTVCell">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="noteFilterTVCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="noteFilterTVCell" rowHeight="59" id="cSH-3w-Quf" customClass="NoteFilterTVCell">
                                 <rect key="frame" x="0.0" y="92" width="375" height="59"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cSH-3w-Quf" id="3KJ-vh-JHP">
-                                    <frame key="frameInset" width="375" height="59"/>
+                                    <frame key="frameInset" width="375" height="58"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZuX-BA-jqZ">
-                                            <frame key="frameInset" minX="21" minY="19" width="271" height="21"/>
+                                            <frame key="frameInset" minX="52" minY="19" width="271" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <attributedString key="attributedText">
                                                 <fragment content="Label">
                                                     <attributes>
                                                         <font key="NSFont" size="17" name="Futura-Medium"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                     </attributes>
                                                 </fragment>
                                             </attributedString>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zeb-s7-OPK">
-                                            <frame key="frameInset" minX="300" minY="14" width="51" height="31"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        </switch>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.45006740093231201" green="0.74361902475357056" blue="0.28507822751998901" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
-                                    <outlet property="filterActivedSwitch" destination="Zeb-s7-OPK" id="13m-td-2tP"/>
                                     <outlet property="filterOptionLabel" destination="ZuX-BA-jqZ" id="LjV-Bn-nR8"/>
                                 </connections>
                             </tableViewCell>

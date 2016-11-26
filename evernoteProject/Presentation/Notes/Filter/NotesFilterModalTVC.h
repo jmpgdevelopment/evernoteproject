@@ -8,7 +8,16 @@
 
 #import <UIKit/UIKit.h>
 #import "BaseTableVC.h"
+#import <evernote-cloud-sdk-ios/ENSession.h>
+
+@protocol NotesFilterProtocol <NSObject>
+
+- (void)refreshNotes:(UITableViewController *)controller didFinishSettingFilter:(ENSessionSortOrder *)sortOrder;
+
+@end
 
 @interface NotesFilterModalTVC : BaseTableVC
+
+@property (nonatomic, weak) id <NotesFilterProtocol> delegate;
 
 @end
