@@ -11,6 +11,7 @@
 @interface NoteDetailsVC ()
 
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UIWebView *noteDetailWebView;
 
 @end
 
@@ -28,18 +29,24 @@
 
     self.navigationItem.title = NSLocalizedString(@"noteDetails", @"noteDetails");
     [self configTitleView];
-    [self configContentView];
+    [self loadWebDataFromNote:self.note];
 }
 
 - (void)configTitleView {
 
     self.titleLabel.text = self.note.title;
+    NSLog(@"NOTE DETAILS : %@, ", self.note.content);
 }
 
-- (void)configContentView   {
+- (void)loadWebDataFromNote:(ENNote *)note   {
 
+    [note generateWebArchiveData:^(NSData *data) {
+        [self.noteDetailWebView loadData:data
+                      MIMEType:ENWebArchiveDataMIMEType
+              textEncodingName:nil
+                       baseURL:nil];
+    }];
 }
-
 
 
 @end

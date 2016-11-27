@@ -36,23 +36,18 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i1H-bv-5fq" userLabel="topView">
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E16-39-eE5">
-                                        <attributedString key="attributedText">
-                                            <fragment content="Title">
-                                                <attributes>
-                                                    <font key="NSFont" size="17" name="Futura-Medium"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                        </attributedString>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E16-39-eE5">
+                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="Write note title here..." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Okv-vN-XRi">
+                                        <color key="backgroundColor" red="0.88404625654220581" green="0.93111371994018555" blue="0.85285669565200806" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <attributedString key="attributedText"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                 </subviews>
-                                <color key="backgroundColor" red="0.67843137254901964" green="0.83921568627450982" blue="0.54117647058823526" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.33754414319992065" green="0.59744536876678467" blue="0.2049928605556488" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="E16-39-eE5" secondAttribute="bottom" constant="58" id="4dC-aC-Erd"/>
                                     <constraint firstAttribute="bottom" secondItem="Okv-vN-XRi" secondAttribute="bottom" constant="20" id="EBv-us-cux"/>
@@ -67,29 +62,17 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G48-17-87H" userLabel="ContentView">
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H3H-WO-WZb">
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <attributedString key="attributedText">
-                                            <fragment content="Write your note here...">
-                                                <attributes>
-                                                    <font key="NSFont" size="14" name="Futura-Medium"/>
-                                                </attributes>
-                                            </fragment>
-                                        </attributedString>
+                                        <color key="backgroundColor" red="0.8838621973991394" green="0.93130302429199219" blue="0.84429699182510376" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <attributedString key="attributedText"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dqf-Q2-rQg">
-                                        <attributedString key="attributedText">
-                                            <fragment content="Content">
-                                                <attributes>
-                                                    <font key="NSFont" size="17" name="Futura-Medium"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                        </attributedString>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Content" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dqf-Q2-rQg">
+                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.67843137254901964" green="0.83921568627450982" blue="0.54117647058823526" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.33754414319992065" green="0.59744536876678467" blue="0.2049928605556488" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="H3H-WO-WZb" firstAttribute="top" secondItem="G48-17-87H" secondAttribute="top" constant="52" id="2Va-Wj-JCi"/>
                                     <constraint firstAttribute="trailing" secondItem="dqf-Q2-rQg" secondAttribute="trailing" constant="16" id="3Sy-7m-wF2"/>
@@ -102,7 +85,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.67843137254901964" green="0.83921568627450982" blue="0.54117647058823526" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.33754414319992065" green="0.59744536876678467" blue="0.2049928605556488" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="G48-17-87H" firstAttribute="top" secondItem="bi6-Rz-54e" secondAttribute="bottom" constant="107" id="IXm-FE-E2S"/>
                             <constraint firstItem="kPO-G0-ANI" firstAttribute="top" secondItem="G48-17-87H" secondAttribute="bottom" constant="112" id="JH6-qh-bjt"/>
@@ -115,6 +98,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="MQO-Lh-5eQ">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="y0h-gq-iO3">
+                            <connections>
+                                <action selector="cancelAction:" destination="C7u-ea-Tao" id="Rv7-55-ioc"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="cMJ-4Q-Pf7">
                             <connections>
                                 <action selector="saveAction:" destination="C7u-ea-Tao" id="mNT-wV-pi5"/>
@@ -122,8 +110,11 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="cancelButton" destination="y0h-gq-iO3" id="EIx-OC-EIn"/>
+                        <outlet property="contentLabel" destination="dqf-Q2-rQg" id="j6r-VM-l4X"/>
                         <outlet property="saveButton" destination="cMJ-4Q-Pf7" id="dAF-sj-xfD"/>
                         <outlet property="textContentTextView" destination="H3H-WO-WZb" id="Duh-Oj-7AS"/>
+                        <outlet property="titleLabel" destination="E16-39-eE5" id="boK-6w-5Xr"/>
                         <outlet property="titleTextField" destination="Okv-vN-XRi" id="Ms6-cF-qF0"/>
                     </connections>
                 </viewController>
