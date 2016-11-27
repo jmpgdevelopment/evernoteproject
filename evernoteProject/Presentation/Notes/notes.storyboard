@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -28,13 +29,9 @@
                                     <frame key="frameInset" width="375" height="50"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zxj-bc-d96" userLabel="titleView">
-                                            <frame key="frameInset" width="375" height="51"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zxj-bc-d96" userLabel="titleView">
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HMv-3F-vfv">
-                                                    <frame key="frameInset" minY="-1" width="375" height="52"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HMv-3F-vfv">
                                                     <attributedString key="attributedText">
                                                         <fragment content="Title Note">
                                                             <attributes>
@@ -48,8 +45,20 @@
                                                 </label>
                                             </subviews>
                                             <color key="backgroundColor" red="0.33725490196078434" green="0.59607843137254901" blue="0.20392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="HMv-3F-vfv" secondAttribute="trailing" id="D4M-23-ZFp"/>
+                                                <constraint firstItem="HMv-3F-vfv" firstAttribute="leading" secondItem="Zxj-bc-d96" secondAttribute="leading" id="f4x-Of-R29"/>
+                                                <constraint firstAttribute="bottom" secondItem="HMv-3F-vfv" secondAttribute="bottom" id="jde-2s-uef"/>
+                                                <constraint firstItem="HMv-3F-vfv" firstAttribute="top" secondItem="Zxj-bc-d96" secondAttribute="top" constant="-1" id="uJ5-1B-udD"/>
+                                            </constraints>
                                         </view>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Zxj-bc-d96" firstAttribute="leading" secondItem="nQY-sY-U9z" secondAttribute="leading" id="5Ab-DK-BZd"/>
+                                        <constraint firstItem="Zxj-bc-d96" firstAttribute="top" secondItem="nQY-sY-U9z" secondAttribute="topMargin" constant="-8" id="aux-VL-7wy"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="Zxj-bc-d96" secondAttribute="bottom" constant="-9" id="c2T-U6-ycI"/>
+                                        <constraint firstAttribute="trailing" secondItem="Zxj-bc-d96" secondAttribute="trailing" id="hIM-ha-478"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="titleLabel" destination="HMv-3F-vfv" id="Nnk-I9-X7K"/>
@@ -63,7 +72,11 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Root View Controller" id="gcb-RU-Xye">
                         <rightBarButtonItems>
-                            <barButtonItem systemItem="add" id="7Cr-9b-OJG" userLabel="AddNoteItem"/>
+                            <barButtonItem systemItem="add" id="7Cr-9b-OJG" userLabel="AddNoteItem">
+                                <connections>
+                                    <segue destination="vh5-8Q-vxR" kind="presentation" identifier="addNoteSegue" id="H9Z-o1-o90"/>
+                                </connections>
+                            </barButtonItem>
                             <barButtonItem title="Filter" id="umc-Wf-EKY" userLabel="FilterNoteItem">
                                 <connections>
                                     <segue destination="4Az-AI-iIo" kind="presentation" identifier="notesFilterSegue" id="3nE-X6-CD0"/>
@@ -77,7 +90,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lvY-Fp-q8q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-84" y="-114.69265367316342"/>
+            <point key="canvasLocation" x="-457" y="-116"/>
         </scene>
         <!--notesFilter-->
         <scene sceneID="lk7-5n-NGb">
@@ -85,7 +98,15 @@
                 <viewControllerPlaceholder storyboardName="notesFilter" id="4Az-AI-iIo" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HM4-Mx-nj7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="96" y="-483"/>
+            <point key="canvasLocation" x="104" y="-97"/>
+        </scene>
+        <!--addNote-->
+        <scene sceneID="hFd-I3-Cd4">
+            <objects>
+                <viewControllerPlaceholder storyboardName="addNote" id="vh5-8Q-vxR" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UZo-Ft-MBJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="93" y="-142"/>
         </scene>
         <!--Note DetailsVC-->
         <scene sceneID="KCf-DU-o06">
@@ -103,7 +124,7 @@
                                 <frame key="frameInset" minY="64" width="375" height="56"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mXP-9g-hrU" userLabel="titleLabel">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title Note" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mXP-9g-hrU" userLabel="titleLabel">
                                         <frame key="frameInset" minX="8" minY="8" width="359" height="40"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="17"/>
@@ -126,7 +147,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c3K-vp-2OZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="748" y="-114.69265367316342"/>
+            <point key="canvasLocation" x="598" y="-116"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cIz-tN-0kr">
@@ -142,7 +163,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9s3-rt-BGZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1044" y="-113"/>
+            <point key="canvasLocation" x="-1276" y="-115"/>
         </scene>
     </scenes>
 </document>
