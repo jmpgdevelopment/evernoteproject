@@ -11,7 +11,7 @@
 #import "BaseTableVC.h"
 #import "NotesFilterModalTVC.h"
 
-@interface NotesTableVC : BaseTableVC <NotesFilterProtocol>
+@interface NotesTableVC : BaseTableVC <NotesFilterProtocol, UISearchBarDelegate>
 
 @property (nonatomic) ENSessionSortOrder *sortOrder;
 

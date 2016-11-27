@@ -17,20 +17,26 @@
 
 @property (nonatomic, strong) ENNoteSearch *noteSearch;
 @property (nonatomic, strong) ENNotebook *notebook;
-@property (nonatomic, strong) NSArray *notesArray;
+@property (nonatomic, strong) NSMutableArray *notesArray;
+@property (nonatomic, strong) NSMutableArray *notesArrayToSearch;
 @property (nonatomic, strong) NSArray *notebooksArray;
 @property (nonatomic, strong) NSError *error;
 
+@property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
+
 @end
 
-@implementation NotesTableVC
+@implementation NotesTableVC 
 
 - (void)viewDidLoad {
 
     [super viewDidLoad];
     [self configView];
     self.sortOrder = (NSUInteger *)ENSessionSortOrderTitle;
+    self.searchBar.delegate = self;
 }
+
+#pragma mark - ConfigView
 
 - (void)configView  {
 
@@ -38,7 +44,7 @@
     [self configNotesTV];
 }
 
-#pragma mark Private methods
+#pragma mark - Private methods
 
 - (void)configNotesTV  {
 
@@ -69,7 +75,8 @@
                                                                  success:^(NSArray *notes) {
 
                                                                      [self dismissLoading];
-                                                                     self.notesArray = notes;
+                                                                     self.notesArray = [[NSMutableArray alloc] initWithArray:notes];
+                                                                     self.notesArrayToSearch = self.notesArray;
                                                                      [self.tableView reloadData];
                                                                  } failure:^(NSError *error) {
 
@@ -78,11 +85,36 @@
                                                                  }];
 }
 
+- (NSMutableArray *)notesArrayBySearchText:(NSString *)searchText notesArray:(NSMutableArray *)notesArray {
+
+    NSMutableArray *notesArrayBySearchText = [[NSMutableArray alloc] init];
+
+    for (ENNote *note in notesArray) {
+        if ([note.title containsString:searchText]) {
+            [notesArrayBySearchText addObject:note];
+        }
+    }
+
+    return notesArrayBySearchText;
+}
+
 #pragma mark - NoteFilterProtocol
 
 - (void)refreshNotes:(UITableViewController *)controller didFinishSettingFilter:(ENSessionSortOrder *)sortOrder	{
 
     [self getNotesArrayFromNotebook:self.notebooksArray[0] sortOrder:sortOrder];
+}
+
+#pragma mark - UISearchBarDelegate
+
+- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
+
+    if (searchText.length < 1) {
+        self.notesArray = self.notesArrayToSearch;
+    } else {
+        self.notesArray = [self notesArrayBySearchText:searchText notesArray:self.notesArrayToSearch];
+    }
+    [self.tableView reloadData];
 }
 
 #pragma mark - UITableVieDataSource
@@ -125,6 +157,5 @@
         notesFilterTVC.delegate = self;
     }
 }
-
 
 @end
