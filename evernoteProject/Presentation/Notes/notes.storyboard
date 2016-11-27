@@ -85,7 +85,48 @@
                 <viewControllerPlaceholder storyboardName="notesFilter" id="4Az-AI-iIo" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HM4-Mx-nj7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="704" y="-234"/>
+            <point key="canvasLocation" x="96" y="-483"/>
+        </scene>
+        <!--Note DetailsVC-->
+        <scene sceneID="KCf-DU-o06">
+            <objects>
+                <viewController storyboardIdentifier="noteDetailsVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5TR-1r-JNa" customClass="NoteDetailsVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GfN-Pp-xdn"/>
+                        <viewControllerLayoutGuide type="bottom" id="rTV-T7-bsq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qmk-Sb-rIv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qBu-UZ-QK8" userLabel="topView">
+                                <frame key="frameInset" minY="64" width="375" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mXP-9g-hrU" userLabel="titleLabel">
+                                        <frame key="frameInset" minX="8" minY="8" width="359" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.4392156862745098" green="0.74509803921568629" blue="0.27058823529411763" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i4u-1a-Wh9" userLabel="ContentView">
+                                <frame key="frameInset" minY="118" width="375" height="549"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.88235294117647056" green="0.93333333333333335" blue="0.84313725490196079" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                        </subviews>
+                    </view>
+                    <connections>
+                        <outlet property="titleLabel" destination="mXP-9g-hrU" id="1mt-h0-dWU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c3K-vp-2OZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="748" y="-114.69265367316342"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cIz-tN-0kr">

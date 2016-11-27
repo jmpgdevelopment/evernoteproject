@@ -12,9 +12,11 @@
 #import "AppDependencies.h"
 #import "NoteTVCell.h"
 #import "NotesFilterModalTVC.h"
+#import "NoteDetailsVC.h"
 
 @interface NotesTableVC ()
 
+@property (nonatomic, strong) ENNote *note;
 @property (nonatomic, strong) ENNoteSearch *noteSearch;
 @property (nonatomic, strong) ENNotebook *notebook;
 @property (nonatomic, strong) NSMutableArray *notesArray;
@@ -75,14 +77,38 @@
                                                                  success:^(NSArray *notes) {
 
                                                                      [self dismissLoading];
-                                                                     self.notesArray = [[NSMutableArray alloc] initWithArray:notes];
-                                                                     self.notesArrayToSearch = self.notesArray;
+                                                                     self.notesArrayToSearch = [notes copy];
+                                                                     self.notesArray = self.notesArrayToSearch;
                                                                      [self.tableView reloadData];
                                                                  } failure:^(NSError *error) {
 
                                                                      [self dismissLoading];
                                                                      [self showError:error];
                                                                  }];
+}
+
+- (void)getNoteByNoteRef:(ENNoteRef *)noteRef    {
+
+    [self showLoading];
+    [[AppDependencies sharedInstance].notesUseCases getNoteByNoteRef:noteRef
+                                                             success:^(ENNote *note) {
+
+                                                                 [self dismissLoading];
+                                                                 [self showNoteDetails:(ENNote *)note];
+                                                             } failure:^(NSError *error) {
+
+                                                                 [self dismissLoading];
+                                                                 [self showError:error];
+                                                             }];
+}
+
+- (void)showNoteDetails:(ENNote *)note  {
+
+    NoteDetailsVC *noteDetailsVC = [[NoteDetailsVC alloc] init];
+    UIStoryboard *notesStoryBoard = [UIStoryboard storyboardWithName:@"notes" bundle:nil];
+    noteDetailsVC = [notesStoryBoard instantiateViewControllerWithIdentifier:@"noteDetailsVC"];
+    noteDetailsVC.note = note;
+    [self.navigationController showViewController:noteDetailsVC sender:nil];
 }
 
 - (NSMutableArray *)notesArrayBySearchText:(NSString *)searchText notesArray:(NSMutableArray *)notesArray {
@@ -129,7 +155,6 @@
     return self.notesArray ? self.notesArray.count : 0;
 }
 
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 
     NoteTVCell *cell = [tableView dequeueReusableCellWithIdentifier:@"noteTVCell" forIndexPath:indexPath];
@@ -144,7 +169,10 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 
-    NSLog(@"Title: %@", [self.notesArray[indexPath.row] title]);
+    NSLog(@"Title: %@", [self.notesArrayToSearch[indexPath.row] title]);
+    NSInteger row = [self.tableView indexPathForSelectedRow].row;
+    ENNoteRef *noteRef = [self.notesArrayToSearch[row] noteRef];
+    [self getNoteByNoteRef:noteRef];
 }
 
 #pragma mark - Navigation
