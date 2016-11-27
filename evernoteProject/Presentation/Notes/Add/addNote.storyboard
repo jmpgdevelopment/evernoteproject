@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="wQS-2e-TYp">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="vMJ-sk-ei0">
+            <objects>
+                <navigationController useStoryboardIdentifierAsRestorationIdentifier="YES" id="wQS-2e-TYp" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="q6j-VD-JUf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="C7u-ea-Tao" kind="relationship" relationship="rootViewController" id="ewg-Xu-0Yb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yGt-K5-8jL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1081" y="61"/>
+        </scene>
+        <!--Add NoteVC-->
+        <scene sceneID="lAa-8g-q3L">
+            <objects>
+                <viewController id="C7u-ea-Tao" customClass="AddNoteVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bi6-Rz-54e"/>
+                        <viewControllerLayoutGuide type="bottom" id="kPO-G0-ANI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5AU-oi-f3b">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i1H-bv-5fq" userLabel="topView">
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E16-39-eE5">
+                                        <attributedString key="attributedText">
+                                            <fragment content="Title">
+                                                <attributes>
+                                                    <font key="NSFont" size="17" name="Futura-Medium"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="Write note title here..." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Okv-vN-XRi">
+                                        <attributedString key="attributedText"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" red="0.67843137254901964" green="0.83921568627450982" blue="0.54117647058823526" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="E16-39-eE5" secondAttribute="bottom" constant="58" id="4dC-aC-Erd"/>
+                                    <constraint firstAttribute="bottom" secondItem="Okv-vN-XRi" secondAttribute="bottom" constant="20" id="EBv-us-cux"/>
+                                    <constraint firstAttribute="trailing" secondItem="Okv-vN-XRi" secondAttribute="trailing" constant="17" id="MCX-Gg-4gh"/>
+                                    <constraint firstItem="Okv-vN-XRi" firstAttribute="leading" secondItem="i1H-bv-5fq" secondAttribute="leading" constant="18" id="ONo-P7-0ul"/>
+                                    <constraint firstItem="Okv-vN-XRi" firstAttribute="top" secondItem="i1H-bv-5fq" secondAttribute="top" constant="49" id="P2i-R2-55J"/>
+                                    <constraint firstAttribute="trailing" secondItem="E16-39-eE5" secondAttribute="trailing" constant="143" id="XGB-5M-Sno"/>
+                                    <constraint firstItem="E16-39-eE5" firstAttribute="top" secondItem="i1H-bv-5fq" secondAttribute="top" constant="20" id="hx3-y7-63M"/>
+                                    <constraint firstItem="E16-39-eE5" firstAttribute="leading" secondItem="i1H-bv-5fq" secondAttribute="leading" constant="144" id="viG-GB-fNb"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G48-17-87H" userLabel="ContentView">
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H3H-WO-WZb">
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Write your note here...">
+                                                <attributes>
+                                                    <font key="NSFont" size="14" name="Futura-Medium"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dqf-Q2-rQg">
+                                        <attributedString key="attributedText">
+                                            <fragment content="Content">
+                                                <attributes>
+                                                    <font key="NSFont" size="17" name="Futura-Medium"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.67843137254901964" green="0.83921568627450982" blue="0.54117647058823526" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="H3H-WO-WZb" firstAttribute="top" secondItem="G48-17-87H" secondAttribute="top" constant="52" id="2Va-Wj-JCi"/>
+                                    <constraint firstAttribute="trailing" secondItem="dqf-Q2-rQg" secondAttribute="trailing" constant="16" id="3Sy-7m-wF2"/>
+                                    <constraint firstItem="dqf-Q2-rQg" firstAttribute="top" secondItem="G48-17-87H" secondAttribute="top" constant="8" id="7oI-Kc-4g7"/>
+                                    <constraint firstAttribute="trailing" secondItem="H3H-WO-WZb" secondAttribute="trailing" constant="16" id="QTe-pM-ziF"/>
+                                    <constraint firstAttribute="bottom" secondItem="H3H-WO-WZb" secondAttribute="bottom" constant="72" id="WGJ-zi-H87"/>
+                                    <constraint firstItem="H3H-WO-WZb" firstAttribute="leading" secondItem="G48-17-87H" secondAttribute="leading" constant="16" id="brM-FF-d1s"/>
+                                    <constraint firstItem="dqf-Q2-rQg" firstAttribute="leading" secondItem="G48-17-87H" secondAttribute="leading" constant="16" id="clh-Rt-2F9"/>
+                                    <constraint firstAttribute="bottom" secondItem="dqf-Q2-rQg" secondAttribute="bottom" constant="353" id="ywu-zp-fzV"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.67843137254901964" green="0.83921568627450982" blue="0.54117647058823526" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="G48-17-87H" firstAttribute="top" secondItem="bi6-Rz-54e" secondAttribute="bottom" constant="107" id="IXm-FE-E2S"/>
+                            <constraint firstItem="kPO-G0-ANI" firstAttribute="top" secondItem="G48-17-87H" secondAttribute="bottom" constant="112" id="JH6-qh-bjt"/>
+                            <constraint firstAttribute="trailing" secondItem="G48-17-87H" secondAttribute="trailing" id="Qp3-PD-pZ6"/>
+                            <constraint firstItem="kPO-G0-ANI" firstAttribute="top" secondItem="i1H-bv-5fq" secondAttribute="bottom" constant="504" id="R2g-Gx-shT"/>
+                            <constraint firstItem="G48-17-87H" firstAttribute="leading" secondItem="5AU-oi-f3b" secondAttribute="leading" id="bJf-hg-e9l"/>
+                            <constraint firstAttribute="trailing" secondItem="i1H-bv-5fq" secondAttribute="trailing" constant="-3" id="bYw-Fr-Bjs"/>
+                            <constraint firstItem="i1H-bv-5fq" firstAttribute="leading" secondItem="5AU-oi-f3b" secondAttribute="leading" id="vGh-wX-idD"/>
+                            <constraint firstItem="i1H-bv-5fq" firstAttribute="top" secondItem="bi6-Rz-54e" secondAttribute="bottom" id="xWt-X7-cdq"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="MQO-Lh-5eQ">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="cMJ-4Q-Pf7">
+                            <connections>
+                                <action selector="saveAction:" destination="C7u-ea-Tao" id="mNT-wV-pi5"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="saveButton" destination="cMJ-4Q-Pf7" id="dAF-sj-xfD"/>
+                        <outlet property="textContentTextView" destination="H3H-WO-WZb" id="Duh-Oj-7AS"/>
+                        <outlet property="titleTextField" destination="Okv-vN-XRi" id="Ms6-cF-qF0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="egr-cT-5ck" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-135.19999999999999" y="60.719640179910051"/>
+        </scene>
+    </scenes>
+</document>
