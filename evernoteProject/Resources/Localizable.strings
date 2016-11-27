@@ -2,6 +2,7 @@
 "logout" = "Logout";
 "notes" = "Notes";
 "notesFilter" = "Filter Notes";
+"noteDetails" = "Note Details";
 "orderByTitle" = "Order by title";
 "orderByCreationDate" = "Order by creation date";
 "orderByModificationDate" = "Order by modification date";
