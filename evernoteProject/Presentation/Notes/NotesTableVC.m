@@ -131,6 +131,13 @@
     [self getNotesArrayFromNotebook:self.notebooksArray[0] sortOrder:sortOrder];
 }
 
+#pragma mark - AddNoteVCProtocol
+
+- (void)refreshNotes:(UITableViewController *)controller didFinishAddingNote:(ENSessionSortOrder *)sortOrder    {
+
+    [self getNotesArrayFromNotebook:self.notebooksArray[0] sortOrder:sortOrder];
+}
+
 #pragma mark - UISearchBarDelegate
 
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
@@ -184,6 +191,13 @@
         NotesFilterModalTVC *notesFilterTVC = (NotesFilterModalTVC *)nav.topViewController;
         notesFilterTVC.delegate = self;
     }
+
+    if ([segue.identifier isEqualToString:@"addNoteSegue"]) {
+        UINavigationController *nav = [segue destinationViewController];
+        AddNoteVC *addNoteVC = (AddNoteVC *)nav.topViewController;
+        addNoteVC.delegate = self;
+    }
+
 }
 
 @end
