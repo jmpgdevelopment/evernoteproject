@@ -34,16 +34,48 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sMl-ez-msz">
-                                <frame key="frameInset" minX="133" minY="99" width="108" height="46"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Notes"/>
-                                <connections>
-                                    <segue destination="KPh-aI-001" kind="show" id="beL-5f-Xqh"/>
-                                </connections>
-                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Du-GA-dUP" userLabel="contentView">
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sMl-ez-msz">
+                                        <color key="backgroundColor" red="0.24705882352941178" green="0.47058823529411764" blue="0.16470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="19"/>
+                                        <state key="normal" title="Go to notes!"/>
+                                        <connections>
+                                            <segue destination="KPh-aI-001" kind="show" id="beL-5f-Xqh"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="laC-8U-7jz">
+                                        <attributedString key="attributedText">
+                                            <fragment content="Label">
+                                                <attributes>
+                                                    <font key="NSFont" size="17" name="Futura-Medium"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.67843137254901964" green="0.83921568627450982" blue="0.54117647058823526" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="laC-8U-7jz" secondAttribute="bottom" constant="156" id="0Ru-aB-DEw"/>
+                                    <constraint firstAttribute="trailing" secondItem="laC-8U-7jz" secondAttribute="trailing" constant="78" id="6y5-lJ-phG"/>
+                                    <constraint firstAttribute="trailing" secondItem="sMl-ez-msz" secondAttribute="trailing" constant="107" id="ATA-hE-nY7"/>
+                                    <constraint firstItem="laC-8U-7jz" firstAttribute="top" secondItem="8Du-GA-dUP" secondAttribute="top" constant="8" id="HLx-QK-dWg"/>
+                                    <constraint firstItem="sMl-ez-msz" firstAttribute="leading" secondItem="8Du-GA-dUP" secondAttribute="leading" constant="106" id="JLH-cE-H4B"/>
+                                    <constraint firstItem="sMl-ez-msz" firstAttribute="top" secondItem="8Du-GA-dUP" secondAttribute="top" constant="59" id="XQq-2q-vGt"/>
+                                    <constraint firstAttribute="bottom" secondItem="sMl-ez-msz" secondAttribute="bottom" constant="60" id="mRt-VW-8De"/>
+                                    <constraint firstItem="laC-8U-7jz" firstAttribute="leading" secondItem="8Du-GA-dUP" secondAttribute="leading" constant="77" id="nW4-lo-Fwj"/>
+                                </constraints>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.67843137254901964" green="0.83921568627450982" blue="0.54117647058823526" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="8Du-GA-dUP" firstAttribute="top" secondItem="gb9-ay-ytd" secondAttribute="bottom" id="ZDs-or-cYr"/>
+                            <constraint firstAttribute="trailing" secondItem="8Du-GA-dUP" secondAttribute="trailing" id="ago-pV-oZu"/>
+                            <constraint firstItem="WRV-c4-sd5" firstAttribute="top" secondItem="8Du-GA-dUP" secondAttribute="bottom" constant="412" id="fcv-ae-0GA"/>
+                            <constraint firstItem="8Du-GA-dUP" firstAttribute="leading" secondItem="IJn-4S-Qgz" secondAttribute="leading" id="itN-pw-e2U"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="jqa-u1-CQK">
                         <barButtonItem key="rightBarButtonItem" title="Login" id="JZV-Qz-Taf">
@@ -54,12 +86,13 @@
                     </navigationItem>
                     <connections>
                         <outlet property="loginButtonItem" destination="JZV-Qz-Taf" id="fan-Mn-tgS"/>
+                        <outlet property="loginStatusLabel" destination="laC-8U-7jz" id="HmX-lo-PLN"/>
                         <outlet property="notesButton" destination="sMl-ez-msz" id="vPq-Cn-sjS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4HI-rc-hhl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-703.20000000000005" y="-283.80809595202402"/>
+            <point key="canvasLocation" x="-1047" y="-171"/>
         </scene>
         <!--notes-->
         <scene sceneID="guN-dG-uj1">
@@ -67,7 +100,7 @@
                 <viewControllerPlaceholder storyboardName="notes" id="KPh-aI-001" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qbn-xv-AJf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="223" y="-375"/>
+            <point key="canvasLocation" x="-366" y="-172"/>
         </scene>
     </scenes>
 </document>

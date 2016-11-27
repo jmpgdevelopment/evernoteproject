@@ -14,6 +14,7 @@
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *loginButtonItem;
 @property (weak, nonatomic) IBOutlet UIButton *notesButton;
+@property (weak, nonatomic) IBOutlet UILabel *loginStatusLabel;
 
 @end
 
@@ -33,12 +34,18 @@
 - (void)configView  {
 
     [self configLoginButton];
+    [self configLoginStatusLabel];
     [self configNotesButton];
 }
 
 - (void)configLoginButton   {
 
-    self.loginButtonItem.title = [[ENSession sharedSession] isAuthenticated] ? @"Logout" : @"login";
+    self.loginButtonItem.title = [[ENSession sharedSession] isAuthenticated] ? NSLocalizedString(@"logout", @"logout") : NSLocalizedString(@"login", @"login");
+}
+
+- (void)configLoginStatusLabel  {
+
+    self.loginStatusLabel.text = [[ENSession sharedSession] isAuthenticated] ? NSLocalizedString(@"loginStatus", @"loginStatus") : NSLocalizedString(@"logoutStatus", @"logoutStatus");
 }
 
 - (void)configNotesButton   {
