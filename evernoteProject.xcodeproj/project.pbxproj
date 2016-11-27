@@ -36,6 +36,8 @@
 		6BD1C7E61DEA085A008F6193 /* NoteFilterTVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD1C7E51DEA085A008F6193 /* NoteFilterTVCell.m */; };
 		6BD1C7ED1DEA0C94008F6193 /* NoteFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD1C7EC1DEA0C94008F6193 /* NoteFilter.m */; };
 		6BD3EE181DEB004A0083D5E5 /* NoteDetailsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD3EE171DEB004A0083D5E5 /* NoteDetailsVC.m */; };
+		6BD3EE231DEB58EF0083D5E5 /* AddNoteVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD3EE221DEB58EF0083D5E5 /* AddNoteVC.m */; };
+		6BD3EE251DEB591C0083D5E5 /* addNote.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BD3EE241DEB591C0083D5E5 /* addNote.storyboard */; };
 		6BF4F8FF1DE4CFA700F58EA2 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BF4F8FE1DE4CFA700F58EA2 /* CoreData.framework */; };
 		ACA4A79237D4727034347378 /* libPods-evernoteProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E7EF8D8DA0FF8984CDB24E1D /* libPods-evernoteProject.a */; };
 /* End PBXBuildFile section */
@@ -117,6 +119,9 @@
 		6BD1C7EC1DEA0C94008F6193 /* NoteFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NoteFilter.m; path = Entities/NoteFilter.m; sourceTree = "<group>"; };
 		6BD3EE161DEB004A0083D5E5 /* NoteDetailsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NoteDetailsVC.h; path = Presentation/Notes/Details/NoteDetailsVC.h; sourceTree = "<group>"; };
 		6BD3EE171DEB004A0083D5E5 /* NoteDetailsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NoteDetailsVC.m; path = Presentation/Notes/Details/NoteDetailsVC.m; sourceTree = "<group>"; };
+		6BD3EE211DEB58EF0083D5E5 /* AddNoteVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddNoteVC.h; path = Presentation/Notes/Add/AddNoteVC.h; sourceTree = "<group>"; };
+		6BD3EE221DEB58EF0083D5E5 /* AddNoteVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddNoteVC.m; path = Presentation/Notes/Add/AddNoteVC.m; sourceTree = "<group>"; };
+		6BD3EE241DEB591C0083D5E5 /* addNote.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = addNote.storyboard; path = Presentation/Notes/Add/addNote.storyboard; sourceTree = "<group>"; };
 		6BF4F8FE1DE4CFA700F58EA2 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		81CF1A0F83CC6D9CD3FDBECE /* Pods-evernoteProjectUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-evernoteProjectUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-evernoteProjectUITests/Pods-evernoteProjectUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		8D1A6325EB51858044A7C967 /* Pods-evernoteProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-evernoteProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-evernoteProject/Pods-evernoteProject.release.xcconfig"; sourceTree = "<group>"; };
@@ -299,6 +304,7 @@
 				6BB4C1591DE8C268004E5DC1 /* NotesTableVC.m */,
 				6BB4C15C1DE8C2BB004E5DC1 /* NoteTVCell.h */,
 				6BB4C15D1DE8C2BB004E5DC1 /* NoteTVCell.m */,
+				6BD3EE191DEB57440083D5E5 /* Add */,
 				6BD3EE0F1DEAFF520083D5E5 /* Details */,
 				6BA4C2001DEA00FF00C7D6E3 /* Filter */,
 			);
@@ -409,6 +415,16 @@
 				6BD3EE171DEB004A0083D5E5 /* NoteDetailsVC.m */,
 			);
 			name = Details;
+			sourceTree = "<group>";
+		};
+		6BD3EE191DEB57440083D5E5 /* Add */ = {
+			isa = PBXGroup;
+			children = (
+				6BD3EE241DEB591C0083D5E5 /* addNote.storyboard */,
+				6BD3EE211DEB58EF0083D5E5 /* AddNoteVC.h */,
+				6BD3EE221DEB58EF0083D5E5 /* AddNoteVC.m */,
+			);
+			name = Add;
 			sourceTree = "<group>";
 		};
 		E35848B365F7A8B555C63473 /* Pods */ = {
@@ -542,6 +558,7 @@
 				6B90FD831DE793EA007F542B /* Localizable.strings in Resources */,
 				6B3B5A341DE2283B00ABD0D2 /* LaunchScreen.storyboard in Resources */,
 				6B3B5A311DE2283B00ABD0D2 /* Assets.xcassets in Resources */,
+				6BD3EE251DEB591C0083D5E5 /* addNote.storyboard in Resources */,
 				6BB4C15A1DE8C268004E5DC1 /* notes.storyboard in Resources */,
 				6BA4C2051DEA032500C7D6E3 /* notesFilter.storyboard in Resources */,
 				6B82AF9A1DE38655009C2B75 /* Login.storyboard in Resources */,
@@ -708,6 +725,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B82AF851DE383B8009C2B75 /* NotesRest.m in Sources */,
+				6BD3EE231DEB58EF0083D5E5 /* AddNoteVC.m in Sources */,
 				6B3B5A291DE2283B00ABD0D2 /* AppDelegate.m in Sources */,
 				6BB4C1611DE8D8CF004E5DC1 /* BaseTableVC.m in Sources */,
 				6BD1C7E61DEA085A008F6193 /* NoteFilterTVCell.m in Sources */,

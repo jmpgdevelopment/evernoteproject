@@ -38,7 +38,6 @@
 
 - (void)configContentView   {
 
-    ENNote *note = self.note;
 }
 
 
