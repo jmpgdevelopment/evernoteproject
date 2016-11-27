@@ -26,7 +26,7 @@
                                 <rect key="frame" x="0.0" y="136" width="375" height="51"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eYl-Tv-oVE" id="nQY-sY-U9z">
-                                    <frame key="frameInset" width="375" height="50"/>
+                                    <frame key="frameInset" width="375" height="51"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zxj-bc-d96" userLabel="titleView">
@@ -120,9 +120,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qBu-UZ-QK8" userLabel="topView">
-                                <frame key="frameInset" minY="64" width="375" height="56"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qBu-UZ-QK8" userLabel="topView">
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title Note" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mXP-9g-hrU" userLabel="titleLabel">
                                         <frame key="frameInset" minX="8" minY="8" width="359" height="40"/>
@@ -132,22 +130,42 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.4392156862745098" green="0.74509803921568629" blue="0.27058823529411763" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.33754414319992065" green="0.59744536876678467" blue="0.2049928605556488" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i4u-1a-Wh9" userLabel="ContentView">
-                                <frame key="frameInset" minY="118" width="375" height="549"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i4u-1a-Wh9" userLabel="ContentView">
+                                <subviews>
+                                    <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rA8-ZN-kjv">
+                                        <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </webView>
+                                </subviews>
                                 <color key="backgroundColor" red="0.88235294117647056" green="0.93333333333333335" blue="0.84313725490196079" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="rA8-ZN-kjv" firstAttribute="top" secondItem="i4u-1a-Wh9" secondAttribute="top" constant="-43" id="ONq-0E-lVn"/>
+                                    <constraint firstAttribute="bottom" secondItem="rA8-ZN-kjv" secondAttribute="bottom" id="ou2-5D-7co"/>
+                                    <constraint firstAttribute="trailing" secondItem="rA8-ZN-kjv" secondAttribute="trailing" id="uf9-GC-aXl"/>
+                                    <constraint firstItem="rA8-ZN-kjv" firstAttribute="leading" secondItem="i4u-1a-Wh9" secondAttribute="leading" id="w5F-c8-43S"/>
+                                </constraints>
                             </view>
                         </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="i4u-1a-Wh9" secondAttribute="trailing" id="EcL-Pw-UHe"/>
+                            <constraint firstItem="i4u-1a-Wh9" firstAttribute="top" secondItem="GfN-Pp-xdn" secondAttribute="bottom" constant="98" id="Ocg-mw-Umb"/>
+                            <constraint firstItem="qBu-UZ-QK8" firstAttribute="top" secondItem="GfN-Pp-xdn" secondAttribute="bottom" id="XDE-d0-RgK"/>
+                            <constraint firstAttribute="trailing" secondItem="qBu-UZ-QK8" secondAttribute="trailing" id="ZL6-OT-DPA"/>
+                            <constraint firstItem="rTV-T7-bsq" firstAttribute="top" secondItem="i4u-1a-Wh9" secondAttribute="bottom" id="kwD-fV-DBO"/>
+                            <constraint firstItem="i4u-1a-Wh9" firstAttribute="top" secondItem="qBu-UZ-QK8" secondAttribute="bottom" constant="43" id="mcg-gL-g7m"/>
+                            <constraint firstItem="qBu-UZ-QK8" firstAttribute="leading" secondItem="qmk-Sb-rIv" secondAttribute="leading" id="pom-Kc-Fys"/>
+                            <constraint firstItem="i4u-1a-Wh9" firstAttribute="leading" secondItem="qmk-Sb-rIv" secondAttribute="leading" id="vUy-K5-NPy"/>
+                        </constraints>
                     </view>
                     <connections>
+                        <outlet property="noteDetailWebView" destination="rA8-ZN-kjv" id="UYZ-pg-BG5"/>
                         <outlet property="titleLabel" destination="mXP-9g-hrU" id="1mt-h0-dWU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c3K-vp-2OZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="598" y="-116"/>
+            <point key="canvasLocation" x="597.60000000000002" y="-116.49175412293854"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cIz-tN-0kr">
