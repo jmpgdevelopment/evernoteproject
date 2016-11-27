@@ -15,7 +15,7 @@
 
 @end
 
-@interface AddNoteVC : BaseVC
+@interface AddNoteVC : BaseVC <ENSaveToEvernoteActivityDelegate>
 
 @property (nonatomic, weak) id <AddNoteVCProtocol> delegate;
 
