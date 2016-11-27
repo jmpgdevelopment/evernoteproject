@@ -20,8 +20,8 @@
 @implementation BaseVC
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
 
+    [super viewDidLoad];
     self.HUD = [JGProgressHUD progressHUDWithStyle:JGProgressHUDStyleDark];
 }
 
@@ -29,12 +29,11 @@
 
 - (void)showLoading {
 
-    self.HUD.textLabel.text = @"Loading";
+    self.HUD.textLabel.text = NSLocalizedString(@"loading", @"loading");
     [self.HUD showInView:self.view];
 }
 
 - (void)dismissLoading  {
-
     [self.HUD dismiss];
 }
 
@@ -54,7 +53,7 @@
 
 - (void)showError:(NSError *)error  {
 
-    self.HUD.textLabel.text = @"Error";
+    self.HUD.textLabel.text = NSLocalizedString(@"error", @"error");
     self.HUD.indicatorView = [[JGProgressHUDPieIndicatorView alloc] init];
     [self.HUD showInView:self.view];
     [self.HUD dismissAfterDelay:3.0];

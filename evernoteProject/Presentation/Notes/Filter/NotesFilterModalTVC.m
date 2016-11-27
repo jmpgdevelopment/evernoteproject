@@ -58,12 +58,10 @@
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-
     return self.filterLabelsArray ? self.filterLabelsArray.count : 0;
 }
 
@@ -93,6 +91,9 @@
             break;
         case 2:
             self.sortOrder = (NSUInteger *)ENSessionSortOrderRecentlyUpdated;
+            break;
+        default:
+            self.sortOrder = (NSUInteger *)ENSessionSortOrderTitle;
             break;
     }
 }

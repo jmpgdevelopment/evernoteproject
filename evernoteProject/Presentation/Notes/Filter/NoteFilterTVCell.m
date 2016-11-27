@@ -18,17 +18,14 @@
 @implementation NoteFilterTVCell 
 
 - (void)awakeFromNib {
-
     [super awakeFromNib];
 }
 
 - (void)updateCellWith:(NoteFilter *)noteFilter    {
-
     self.filterOptionLabel.text = noteFilter.optionLabel;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-
     [super setSelected:selected animated:animated];
 }
 

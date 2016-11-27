@@ -41,10 +41,10 @@
 - (void)configLoginButton   {
 
     self.loginButtonItem.title = [[ENSession sharedSession] isAuthenticated] ? NSLocalizedString(@"logout", @"logout") : NSLocalizedString(@"login", @"login");
+    self.loginButtonItem.enabled = [[ENSession sharedSession] isAuthenticated] ? NO : YES;
 }
 
 - (void)configLoginStatusLabel  {
-
     self.loginStatusLabel.text = [[ENSession sharedSession] isAuthenticated] ? NSLocalizedString(@"loginStatus", @"loginStatus") : NSLocalizedString(@"logoutStatus", @"logoutStatus");
 }
 
@@ -59,12 +59,14 @@
 - (IBAction)LoginAction:(id)sender {
 
     if ([[ENSession sharedSession] isAuthenticated]) {
+
         [[ENSession sharedSession] unauthenticate];
         [self configLoginButton];
     } else {
         [[ENSession sharedSession] authenticateWithViewController:self
                                                preferRegistration:NO
                                                        completion:^(NSError *authenticateError) {
+
                                                            if (!authenticateError) {
                                                                [self showSuccess];
                                                            } else if (authenticateError.code != ENErrorCodeCancelled) {

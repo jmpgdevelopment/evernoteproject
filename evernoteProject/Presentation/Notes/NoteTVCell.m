@@ -17,22 +17,18 @@
 @implementation NoteTVCell
 
 - (void)awakeFromNib {
-
     [super awakeFromNib];
 }
 
 - (void)updateCellWith:(ENNote *)note   {
-    
     self.titleLabel.text = note.title;
 }
 
 - (void)resetCell{
-
     self.titleLabel.text = @"";
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    
     [super setSelected:selected animated:animated];
 }
 

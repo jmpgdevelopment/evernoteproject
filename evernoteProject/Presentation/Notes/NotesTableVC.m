@@ -127,14 +127,12 @@
 #pragma mark - NoteFilterProtocol
 
 - (void)refreshNotes:(UITableViewController *)controller didFinishSettingFilter:(ENSessionSortOrder *)sortOrder	{
-
     [self getNotesArrayFromNotebook:self.notebooksArray[0] sortOrder:sortOrder];
 }
 
 #pragma mark - AddNoteVCProtocol
 
 - (void)refreshNotes:(UITableViewController *)controller didFinishAddingNote:(ENSessionSortOrder *)sortOrder    {
-
     [self getNotesArrayFromNotebook:self.notebooksArray[0] sortOrder:sortOrder];
 }
 
@@ -153,12 +151,10 @@
 #pragma mark - UITableVieDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-
     return self.notesArray ? self.notesArray.count : 0;
 }
 
@@ -176,7 +172,6 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 
-    NSLog(@"Title: %@", [self.notesArrayToSearch[indexPath.row] title]);
     NSInteger row = [self.tableView indexPathForSelectedRow].row;
     ENNoteRef *noteRef = [self.notesArrayToSearch[row] noteRef];
     [self getNoteByNoteRef:noteRef];
@@ -197,7 +192,6 @@
         AddNoteVC *addNoteVC = (AddNoteVC *)nav.topViewController;
         addNoteVC.delegate = self;
     }
-
 }
 
 @end
