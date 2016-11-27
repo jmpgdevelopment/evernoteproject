@@ -11,24 +11,24 @@
 
 @interface NoteFilterTVCell ()
 
-@property (weak, nonatomic) IBOutlet UISwitch *filterActivedSwitch;
 @property (weak, nonatomic) IBOutlet UILabel *filterOptionLabel;
 
 @end
 
-@implementation NoteFilterTVCell
+@implementation NoteFilterTVCell 
 
 - (void)awakeFromNib {
+
     [super awakeFromNib];
 }
 
 - (void)updateCellWith:(NoteFilter *)noteFilter    {
 
     self.filterOptionLabel.text = noteFilter.optionLabel;
-    self.filterActivedSwitch.enabled = noteFilter.filterActivedSwitch;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
+
     [super setSelected:selected animated:animated];
 }
 
