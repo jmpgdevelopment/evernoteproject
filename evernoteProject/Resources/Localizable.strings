@@ -9,3 +9,7 @@
 "newNote" = "New Note";
 "loginStatus" = "You are ready logged!";
 "logoutStatus" = "You have to login!";
+"title" = "Title";
+"content" = "Content";
+"loading" = "Loading";
+"error" = "Error";
