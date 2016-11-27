@@ -67,6 +67,22 @@
     }];
 }
 
+- (void)getNoteByNoteRef:(ENNoteRef *)noteRef
+                 success:(void (^)(ENNote *))success
+                 failure:(void (^)(NSError *))failure {
+
+    [[ENSession sharedSession] downloadNote:noteRef
+                                   progress:nil
+                                 completion:^(ENNote *note, NSError *downloadNoteError) {
+
+                                     if (note) {
+                                         success(note);
+                                     } else {
+                                         failure(downloadNoteError);
+                                     }
+    }];
+}
+
 
 
 

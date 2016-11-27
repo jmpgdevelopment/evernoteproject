@@ -23,4 +23,8 @@
            success:(void (^)(ENNoteRef *))success
            failure:(void (^)(NSError *))failure;
 
+- (void)getNoteByNoteRef:(ENNoteRef *)noteRef
+                 success:(void (^)(ENNote *))success
+                 failure:(void (^)(NSError *))failure;
+
 @end
